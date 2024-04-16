@@ -56,7 +56,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
           style: AppTheme.getTextStyle(
             themeData.textTheme.subtitle1,
             fontWeight: 600,
-            color: themeData.colorScheme.primaryVariant,
           ),
         ),
       ),
@@ -79,7 +78,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
                             style: AppTheme.getTextStyle(
                               themeData.textTheme.headline6,
                               fontWeight: 600,
-                              color: themeData.colorScheme.primaryVariant,
                             ),
                           ),
                         ],
@@ -136,7 +134,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
                                   style: AppTheme.getTextStyle(
                                     themeData.textTheme.subtitle1,
                                     fontWeight: 600,
-                                    color: themeData.colorScheme.primaryVariant,
                                   ),
                                 ),
                                 Padding(
@@ -179,7 +176,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
                                   style: AppTheme.getTextStyle(
                                     themeData.textTheme.subtitle1,
                                     fontWeight: 600,
-                                    color: themeData.colorScheme.primaryVariant,
                                   ),
                                 ),
                                 Padding(
@@ -229,7 +225,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
                               style: AppTheme.getTextStyle(
                                 themeData.textTheme.subtitle1,
                                 fontWeight: 600,
-                                color: themeData.colorScheme.primaryVariant,
                               ),
                             ),
                             customerList()
@@ -244,7 +239,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
                             style: AppTheme.getTextStyle(
                               themeData.textTheme.subtitle1,
                               fontWeight: 600,
-                              color: themeData.colorScheme.primaryVariant,
                             ),
                           ),
                           Card(
@@ -279,7 +273,6 @@ class _NewVisitFormState extends State<NewVisitForm> {
                             style: AppTheme.getTextStyle(
                               themeData.textTheme.subtitle1,
                               fontWeight: 600,
-                              color: themeData.colorScheme.primaryVariant,
                             ),
                           ),
                           Padding(

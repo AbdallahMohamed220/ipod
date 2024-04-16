@@ -399,7 +399,6 @@ class _FollowUpState extends State<FollowUp> {
             style: AppTheme.getTextStyle(
               themeData.textTheme.subtitle1,
               fontWeight: 600,
-              color: themeData.colorScheme.primaryVariant,
             ),
           ),
           Visibility(

@@ -5,9 +5,9 @@ class Config {
   //static String baseUrl = 'https://devxpos.idiib.com/';
   static String baseUrl = 'https://quixcelerp.com/';
   static int? userId;
-  String clientId = '8',
+  String clientId = '16',
       //clientSecret = 'lDzqLvBHjrGSKPqV8MVTzPsc09cLkT2MA8pGYWL5',
-      clientSecret = 'PKgzVdrWgu7pHwn0QqsQlh3JlqVy0pTFChXxQMYI',
+      clientSecret = 'B4UNLqT18Os4CFcwLNvK2NQQHeShD5LVxkTbkbPO',
       copyright = '\u00a9',
       appName = 'pos',
       version = 'V 2.0',

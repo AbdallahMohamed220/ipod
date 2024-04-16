@@ -76,117 +76,117 @@ class AppTheme {
 
   //App Bar Text
   static final TextTheme lightAppBarTextTheme = TextTheme(
-    headline1: GoogleFonts.ibmPlexSans(
+    displayLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 102, color: Color(0xff495057))),
-    headline2: GoogleFonts.ibmPlexSans(
+    displayMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 64, color: Color(0xff495057))),
-    headline3: GoogleFonts.ibmPlexSans(
+    displaySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 51, color: Color(0xff495057))),
-    headline4: GoogleFonts.ibmPlexSans(
+    headlineMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 36, color: Color(0xff495057))),
-    headline5: GoogleFonts.ibmPlexSans(
+    headlineSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 25, color: Color(0xff495057))),
-    headline6: GoogleFonts.ibmPlexSans(
+    titleLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 18, color: Color(0xff495057))),
-    subtitle1: GoogleFonts.ibmPlexSans(
+    titleMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 17, color: Color(0xff495057))),
-    subtitle2: GoogleFonts.ibmPlexSans(
+    titleSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Color(0xff495057))),
-    bodyText1: GoogleFonts.ibmPlexSans(
+    bodyLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 16, color: Color(0xff495057))),
-    bodyText2: GoogleFonts.ibmPlexSans(
+    bodyMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 14, color: Color(0xff495057))),
-    button: GoogleFonts.ibmPlexSans(
+    labelLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Color(0xff495057))),
-    caption: GoogleFonts.ibmPlexSans(
+    bodySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 13, color: Color(0xff495057))),
-    overline: GoogleFonts.ibmPlexSans(
+    labelSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 11, color: Color(0xff495057))),
   );
   static final TextTheme darkAppBarTextTheme = TextTheme(
-    headline1: GoogleFonts.ibmPlexSans(
+    displayLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 102, color: Color(0xffffffff))),
-    headline2: GoogleFonts.ibmPlexSans(
+    displayMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 64, color: Color(0xffffffff))),
-    headline3: GoogleFonts.ibmPlexSans(
+    displaySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 51, color: Color(0xffffffff))),
-    headline4: GoogleFonts.ibmPlexSans(
+    headlineMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 36, color: Color(0xffffffff))),
-    headline5: GoogleFonts.ibmPlexSans(
+    headlineSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 25, color: Color(0xffffffff))),
-    headline6: GoogleFonts.ibmPlexSans(
+    titleLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 20, color: Color(0xffffffff))),
-    subtitle1: GoogleFonts.ibmPlexSans(
+    titleMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 17, color: Color(0xffffffff))),
-    subtitle2: GoogleFonts.ibmPlexSans(
+    titleSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Color(0xffffffff))),
-    bodyText1: GoogleFonts.ibmPlexSans(
+    bodyLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 16, color: Color(0xffffffff))),
-    bodyText2: GoogleFonts.ibmPlexSans(
+    bodyMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 14, color: Color(0xffffffff))),
-    button: GoogleFonts.ibmPlexSans(
+    labelLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Color(0xffffffff))),
-    caption: GoogleFonts.ibmPlexSans(
+    bodySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 13, color: Color(0xffffffff))),
-    overline: GoogleFonts.ibmPlexSans(
+    labelSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 11, color: Color(0xffffffff))),
   );
 
   //Text Themes
   static final TextTheme lightTextTheme = TextTheme(
-    headline1: GoogleFonts.ibmPlexSans(
+    displayLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 102, color: Color(0xff4a4c4f))),
-    headline2: GoogleFonts.ibmPlexSans(
+    displayMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 64, color: Color(0xff4a4c4f))),
-    headline3: GoogleFonts.ibmPlexSans(
+    displaySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 51, color: Color(0xff4a4c4f))),
-    headline4: GoogleFonts.ibmPlexSans(
+    headlineMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 36, color: Color(0xff4a4c4f))),
-    headline5: GoogleFonts.ibmPlexSans(
+    headlineSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 25, color: Color(0xff4a4c4f))),
-    headline6: GoogleFonts.ibmPlexSans(
+    titleLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 18, color: Color(0xff4a4c4f))),
-    subtitle1: GoogleFonts.ibmPlexSans(
+    titleMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 17, color: Color(0xff4a4c4f))),
-    subtitle2: GoogleFonts.ibmPlexSans(
+    titleSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Color(0xff4a4c4f))),
-    bodyText1: GoogleFonts.ibmPlexSans(
+    bodyLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 16, color: Color(0xff4a4c4f))),
-    bodyText2: GoogleFonts.ibmPlexSans(
+    bodyMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 14, color: Color(0xff4a4c4f))),
-    button: GoogleFonts.ibmPlexSans(
+    labelLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Color(0xff4a4c4f))),
-    caption: GoogleFonts.ibmPlexSans(
+    bodySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 13, color: Color(0xff4a4c4f))),
-    overline: GoogleFonts.ibmPlexSans(
+    labelSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 11, color: Color(0xff4a4c4f))),
   );
   static final TextTheme darkTextTheme = TextTheme(
-    headline1: GoogleFonts.ibmPlexSans(
+    displayLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 102, color: Colors.white)),
-    headline2: GoogleFonts.ibmPlexSans(
+    displayMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 64, color: Colors.white)),
-    headline3: GoogleFonts.ibmPlexSans(
+    displaySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 51, color: Colors.white)),
-    headline4: GoogleFonts.ibmPlexSans(
+    headlineMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 36, color: Colors.white)),
-    headline5: GoogleFonts.ibmPlexSans(
+    headlineSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 25, color: Colors.white)),
-    headline6: GoogleFonts.ibmPlexSans(
+    titleLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 18, color: Colors.white)),
-    subtitle1: GoogleFonts.ibmPlexSans(
+    titleMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 17, color: Colors.white)),
-    subtitle2: GoogleFonts.ibmPlexSans(
+    titleSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Colors.white)),
-    bodyText1: GoogleFonts.ibmPlexSans(
+    bodyLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 16, color: Colors.white)),
-    bodyText2: GoogleFonts.ibmPlexSans(
+    bodyMedium: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 14, color: Colors.white)),
-    button: GoogleFonts.ibmPlexSans(
+    labelLarge: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 15, color: Colors.white)),
-    caption: GoogleFonts.ibmPlexSans(
+    bodySmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 13, color: Colors.white)),
-    overline: GoogleFonts.ibmPlexSans(
+    labelSmall: GoogleFonts.ibmPlexSans(
         textStyle: TextStyle(fontSize: 11, color: Colors.white)),
   );
 
@@ -195,10 +195,8 @@ class AppTheme {
     brightness: Brightness.light,
     primaryColor: Color(0xff3d63ff),
     canvasColor: Colors.transparent,
-    backgroundColor: Colors.white,
     scaffoldBackgroundColor: Color(0xffffffff),
     appBarTheme: AppBarTheme(
-      textTheme: lightAppBarTextTheme,
       actionsIconTheme: IconThemeData(
         color: Color(0xff495057),
       ),
@@ -207,9 +205,9 @@ class AppTheme {
     ),
     navigationRailTheme: NavigationRailThemeData(
         selectedIconTheme:
-        IconThemeData(color: Color(0xff3d63ff), opacity: 1, size: 24),
+            IconThemeData(color: Color(0xff3d63ff), opacity: 1, size: 24),
         unselectedIconTheme:
-        IconThemeData(color: Color(0xff495057), opacity: 1, size: 24),
+            IconThemeData(color: Color(0xff495057), opacity: 1, size: 24),
         backgroundColor: Color(0xffffffff),
         elevation: 3,
         selectedLabelTextStyle: TextStyle(color: Color(0xff3d63ff)),
@@ -251,15 +249,14 @@ class AppTheme {
         hoverColor: Color(0xff3d63ff),
         foregroundColor: Colors.white),
     dividerColor: Color(0xffd1d1d1),
-    errorColor: Color(0xfff0323c),
     cardColor: Colors.white,
     popupMenuTheme: PopupMenuThemeData(
       color: Color(0xffffffff),
       textStyle:
-          lightTextTheme.bodyText2!.merge(TextStyle(color: Color(0xff495057))),
+          lightTextTheme.bodyMedium!.merge(TextStyle(color: Color(0xff495057))),
     ),
     bottomAppBarTheme:
-    BottomAppBarTheme(color: Color(0xffffffff), elevation: 2),
+        BottomAppBarTheme(color: Color(0xffffffff), elevation: 2),
     tabBarTheme: TabBarTheme(
       unselectedLabelColor: Color(0xff495057),
       labelColor: Color(0xff3d63ff),
@@ -286,23 +283,21 @@ class AppTheme {
     colorScheme: ColorScheme.light(
             primary: Color(0xff3d63ff),
             onPrimary: Colors.white,
-            primaryVariant: Color(0xff0055ff),
             secondary: Color(0xff495057),
-            secondaryVariant: Color(0xff3cd278),
             onSecondary: Colors.white,
             surface: Color(0xffe2e7f1),
             background: Color(0xfff3f4f7),
             onBackground: Color(0xff495057))
-        .copyWith(secondary: Color(0xff3d63ff)),
+        .copyWith(secondary: Color(0xff3d63ff))
+        .copyWith(background: Colors.white)
+        .copyWith(error: Color(0xfff0323c)),
   );
   static ThemeData darkTheme = ThemeData(
       brightness: Brightness.dark,
       canvasColor: Colors.transparent,
       primaryColor: Color(0xff3d63ff),
       scaffoldBackgroundColor: Color(0xff464c52),
-      backgroundColor: Color(0xff464c52),
       appBarTheme: AppBarTheme(
-        textTheme: darkAppBarTextTheme,
         actionsIconTheme: IconThemeData(
           color: Color(0xffffffff),
         ),
@@ -336,7 +331,6 @@ class AppTheme {
             borderSide: BorderSide(width: 1, color: Colors.white70)),
       ),
       dividerColor: Color(0xffd1d1d1),
-      errorColor: Colors.orange,
       cardColor: Color(0xff282a2b),
       splashColor: Colors.white.withAlpha(100),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
@@ -349,11 +343,11 @@ class AppTheme {
           foregroundColor: Colors.white),
       popupMenuTheme: PopupMenuThemeData(
         color: Color(0xff37404a),
-        textStyle: lightTextTheme.bodyText2!
+        textStyle: lightTextTheme.bodyMedium!
             .merge(TextStyle(color: Color(0xffffffff))),
       ),
       bottomAppBarTheme:
-      BottomAppBarTheme(color: Color(0xff464c52), elevation: 2),
+          BottomAppBarTheme(color: Color(0xff464c52), elevation: 2),
       tabBarTheme: TabBarTheme(
         unselectedLabelColor: Color(0xff495057),
         labelColor: Color(0xff3d63ff),
@@ -380,15 +374,16 @@ class AppTheme {
       cupertinoOverrideTheme: CupertinoThemeData(),
       colorScheme: ColorScheme.dark(
         primary: Color(0xff3d63ff),
-        primaryVariant: Color(0xff3d63ff),
         secondary: Color(0xff00cc77),
-        secondaryVariant: Color(0xff00cc77),
         background: Color(0xff343a40),
         onPrimary: Colors.white,
         onBackground: Colors.white,
         onSecondary: Colors.white,
         surface: Color(0xff585e63),
-      ).copyWith(secondary: Color(0xff3d63ff)));
+      )
+          .copyWith(secondary: Color(0xff3d63ff))
+          .copyWith(background: Color(0xff464c52))
+          .copyWith(error: Colors.orange));
 
   static ThemeData getThemeFromThemeMode(int themeMode) {
     if (themeMode == themeLight) {
@@ -404,8 +399,6 @@ class AppTheme {
     bgLayer2: Color(0xfff9f9f9),
     bgLayer3: Color(0xffe8ecf4),
     bgLayer4: Color(0xffdcdee3),
-
-
     disabledColor: Color(0xff636363),
     onDisabled: Color(0xffffffff),
     colorInfo: Color(0xffff784b),
@@ -416,7 +409,8 @@ class AppTheme {
     onSuccess: Color(0xffffffff),
     onWarning: Color(0xffffffff),
     colorError: Color(0xfff0323c),
-    onError: Color(0xffffffff),);
+    onError: Color(0xffffffff),
+  );
   static final CustomAppTheme darkCustomAppTheme = CustomAppTheme(
       bgLayer1: Color(0xff212429),
       bgLayer2: Color(0xff282930),

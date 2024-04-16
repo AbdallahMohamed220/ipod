@@ -71,7 +71,6 @@ class FollowUpModel {
     return Container(
       margin: EdgeInsets.only(left: MySize.size8!),
       decoration: BoxDecoration(
-        color: themeData.colorScheme.secondaryVariant,
         borderRadius: BorderRadius.all(Radius.circular(MySize.size8!)),
         boxShadow: [
           BoxShadow(

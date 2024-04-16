@@ -40,16 +40,19 @@ dependencies:
   connectivity: any
   cron: any
   cupertino_icons: any
-  date_time_picker: any
+  date_time_picker:
+    git:
+      url: https://github.com/arsarsars1/date_time_picker.git
+      ref: new_version
   dio: any
   flutter_html_to_pdf: any
   #  flutter_phone_state: any
   #  flutter_polyline_points: any
-  fluttertoast: any
+  fluttertoast: 8.2.2
   geolocator: 8.2.1
   get_ip_address: any
-  google_fonts: any
-  google_maps_flutter: any
+  google_fonts: ^6.1.0
+  google_maps_flutter: 2.4.0
   http: any
   image_picker: any
   #  intl_phone_number_input: any
@@ -57,7 +60,7 @@ dependencies:
   path_provider: any
   pdf: any
   permission_handler: 9.0.2
-  printing: 5.9.1
+  printing: ^5.11.1
   provider: any
   qr: any
 #  qr_flutter: any
@@ -65,9 +68,10 @@ dependencies:
   shared_preferences: any
   search_choices: any
   share: any
-  syncfusion_flutter_datepicker: any
+  syncfusion_flutter_datepicker: ^23.1.44
   url_launcher: any
   video_player: any
+  intl: any
 
 
 

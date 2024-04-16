@@ -263,8 +263,9 @@ class _CustomerState extends State<Customer> {
   Widget newCustomer() {
     return Scaffold(
       appBar: new AppBar(
-        title: Text(AppLocalizations.of(context).translate('create_contact'),
-            style: themeData.appBarTheme.textTheme!.headline6),
+        title: Text(
+          AppLocalizations.of(context).translate('create_contact'),
+        ),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,

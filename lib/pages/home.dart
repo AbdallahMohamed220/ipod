@@ -137,7 +137,7 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           elevation: 0,
           title: Text(AppLocalizations.of(context).translate('home'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   fontWeight: 600)),
           actions: <Widget>[
             TextButton(
@@ -150,7 +150,7 @@ class _HomeState extends State<Home> {
               },
               child: Text(
                 AppLocalizations.of(context).translate('sync'),
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyLarge,
                     color: themeData.colorScheme.onBackground, fontWeight: 600),
               ),
             ),
@@ -172,7 +172,7 @@ class _HomeState extends State<Home> {
               },
               child: Text(
                 AppLocalizations.of(context).translate('logout'),
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyLarge,
                     color: themeData.colorScheme.onBackground, fontWeight: 600),
               ),
             ),
@@ -188,7 +188,7 @@ class _HomeState extends State<Home> {
                       AppLocalizations.of(context).translate('welcome') +
                           ' $userName',
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
                           letterSpacing: -0.2)),
                 ),
@@ -206,7 +206,7 @@ class _HomeState extends State<Home> {
   Widget homePageDrawer() {
     return Drawer(
       child: Container(
-        color: themeData.backgroundColor,
+        color: themeData.colorScheme.background,
         child: Column(
           children: <Widget>[
             Container(
@@ -236,7 +236,7 @@ class _HomeState extends State<Home> {
                         "Allow permissions",
                         textAlign: TextAlign.center,
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
+                            themeData.textTheme.titleSmall,
                             color: themeData.colorScheme.error,
                             fontWeight: 600),
                       ),
@@ -269,7 +269,7 @@ class _HomeState extends State<Home> {
                       title: Text(
                         AppLocalizations.of(context).translate('expenses'),
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
+                            themeData.textTheme.titleSmall,
                             fontWeight: 600),
                       ),
                     ),
@@ -282,7 +282,7 @@ class _HomeState extends State<Home> {
                     title: Text(
                       AppLocalizations.of(context).translate('contact_payment'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 600),
                     ),
                     onTap: () async {
@@ -303,7 +303,7 @@ class _HomeState extends State<Home> {
                     title: Text(
                       AppLocalizations.of(context).translate('follow_ups'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 600),
                     ),
                     onTap: () async {
@@ -338,7 +338,7 @@ class _HomeState extends State<Home> {
                         AppLocalizations.of(context)
                             .translate('field_force_visits'),
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
+                            themeData.textTheme.titleSmall,
                             fontWeight: 600),
                       ),
                     ),
@@ -351,7 +351,7 @@ class _HomeState extends State<Home> {
                     title: Text(
                       AppLocalizations.of(context).translate('contacts'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 600),
                     ),
                     onTap: () async {
@@ -375,7 +375,7 @@ class _HomeState extends State<Home> {
                     title: Text(
                       AppLocalizations.of(context).translate('shipment'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 600),
                     ),
                     onTap: () {
@@ -420,7 +420,7 @@ class _HomeState extends State<Home> {
                     title: Text(
                       AppLocalizations.of(context).translate('refresh'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 600),
                     ),
                   ),
@@ -439,7 +439,7 @@ class _HomeState extends State<Home> {
                           "  " +
                           Config().version,
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.bodyMedium,
                           fontWeight: 400,
                           letterSpacing: -0.2),
                     )))
@@ -467,7 +467,7 @@ class _HomeState extends State<Home> {
             value: locale['languageCode'],
             child: Text(
               locale['name'],
-              style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleSmall,
                   fontWeight: 600),
             ),
           );
@@ -523,10 +523,10 @@ class _HomeState extends State<Home> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(subject!,
-                  style: AppTheme.getTextStyle(themeData.textTheme.subtitle1,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
                       fontWeight: 600, color: Colors.white)),
               Text("$amount",
-                  style: AppTheme.getTextStyle(themeData.textTheme.caption,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodySmall,
                       fontWeight: 500, color: Colors.white, letterSpacing: 0)),
             ],
           ),
@@ -594,7 +594,7 @@ class _HomeState extends State<Home> {
       child: Column(
         children: <Widget>[
           Text(AppLocalizations.of(context).translate('payment_details'),
-              style: AppTheme.getTextStyle(themeData.textTheme.subtitle1,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
                   fontWeight: 700, letterSpacing: -0.2)),
           ListView.builder(
               physics: NeverScrollableScrollPhysics(),
@@ -685,7 +685,7 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: (!checkedIn!)
+                backgroundColor: (!checkedIn!)
                     ? themeData.colorScheme.primary
                     : themeData.colorScheme.background,
               ),
@@ -704,7 +704,7 @@ class _HomeState extends State<Home> {
                                     .translate('check_out_note'),
                             textAlign: TextAlign.center,
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.headline6,
+                                themeData.textTheme.titleLarge,
                                 color: themeData.colorScheme.onBackground,
                                 fontWeight: 600,
                                 muted: true)),
@@ -712,14 +712,14 @@ class _HomeState extends State<Home> {
                             controller: note,
                             autofocus: true,
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 color: themeData.colorScheme.onBackground,
                                 fontWeight: 600,
                                 muted: true)),
                         actions: <Widget>[
                           TextButton(
                             style: TextButton.styleFrom(
-                              primary: themeData.colorScheme.primary,
+                              foregroundColor: themeData.colorScheme.primary,
                             ),
                             onPressed: () async {
                               Navigator.pop(context);
@@ -820,12 +820,12 @@ class _HomeState extends State<Home> {
               child: (!checkedIn!)
                   ? Text(AppLocalizations.of(context).translate('check_in'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.headline6,
+                          themeData.textTheme.titleLarge,
                           color: themeData.colorScheme.background,
                           fontWeight: 600))
                   : Text(AppLocalizations.of(context).translate('check_out'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.headline6,
+                          themeData.textTheme.titleLarge,
                           color: themeData.colorScheme.primary,
                           fontWeight: 600)),
             ),
@@ -834,7 +834,7 @@ class _HomeState extends State<Home> {
                     ? ''
                     : DateTime.now().difference(clockInTime).toString(),
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.subtitle2,
+                  themeData.textTheme.titleSmall,
                   color: themeData.colorScheme.onBackground,
                 )),
           ],

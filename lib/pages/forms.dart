@@ -68,9 +68,8 @@ class _VisitFormState extends State<VisitForm> {
         title: Text(
           "${widget.visit['visit_id']}",
           style: AppTheme.getTextStyle(
-            themeData.textTheme.subtitle1,
+            themeData.textTheme.titleMedium,
             fontWeight: 600,
-            color: themeData.colorScheme.primaryVariant,
           ),
         ),
       ),
@@ -89,9 +88,8 @@ class _VisitFormState extends State<VisitForm> {
                           AppLocalizations.of(context)
                               .translate('Did_you_meet_with_the_contact'),
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.headline6,
+                            themeData.textTheme.titleLarge,
                             fontWeight: 600,
-                            color: themeData.colorScheme.primaryVariant,
                           ),
                         ),
                       ],
@@ -142,9 +140,8 @@ class _VisitFormState extends State<VisitForm> {
                           Text(
                             "${AppLocalizations.of(context).translate('reason')} : ",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
-                              color: themeData.colorScheme.primaryVariant,
                             ),
                           ),
                           Padding(
@@ -171,7 +168,7 @@ class _VisitFormState extends State<VisitForm> {
                               ),
                               textCapitalization: TextCapitalization.sentences,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 fontWeight: 500,
                                 color: themeData.colorScheme.onBackground,
                               ),
@@ -185,9 +182,8 @@ class _VisitFormState extends State<VisitForm> {
                         Text(
                           "${AppLocalizations.of(context).translate('take_photo_of_the_contact_or_visited_place')}",
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText1,
+                            themeData.textTheme.bodyLarge,
                             fontWeight: 600,
-                            color: themeData.colorScheme.primaryVariant,
                           ),
                         ),
                       ],
@@ -201,7 +197,7 @@ class _VisitFormState extends State<VisitForm> {
                           child: Text(
                             "${AppLocalizations.of(context).translate('choose_file')}",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText2,
+                              themeData.textTheme.bodyMedium,
                               fontWeight: 600,
                               color: themeData.colorScheme.onBackground,
                             ),
@@ -226,9 +222,8 @@ class _VisitFormState extends State<VisitForm> {
                         Text(
                           "${AppLocalizations.of(context).translate('meet_with')} :* ",
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 600,
-                            color: themeData.colorScheme.primaryVariant,
                           ),
                         )
                       ],
@@ -259,7 +254,7 @@ class _VisitFormState extends State<VisitForm> {
                               }
                             },
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.bodyLarge,
                               fontWeight: 500,
                               color: themeData.colorScheme.onBackground,
                             ),
@@ -292,7 +287,7 @@ class _VisitFormState extends State<VisitForm> {
                                 FilteringTextInputFormatter.digitsOnly
                               ],
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 fontWeight: 500,
                                 color: themeData.colorScheme.onBackground,
                               ),
@@ -320,7 +315,7 @@ class _VisitFormState extends State<VisitForm> {
                             },
                             textCapitalization: TextCapitalization.sentences,
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.bodyLarge,
                               fontWeight: 500,
                               color: themeData.colorScheme.onBackground,
                             ),
@@ -365,7 +360,7 @@ class _VisitFormState extends State<VisitForm> {
                                     .inputDecorationTheme.focusedBorder,
                               ),
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 fontWeight: 500,
                                 color: themeData.colorScheme.onBackground,
                               ),
@@ -391,7 +386,7 @@ class _VisitFormState extends State<VisitForm> {
                                   FilteringTextInputFormatter.digitsOnly
                                 ],
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText1,
+                                  themeData.textTheme.bodyLarge,
                                   fontWeight: 500,
                                   color: themeData.colorScheme.onBackground,
                                 ),
@@ -413,7 +408,7 @@ class _VisitFormState extends State<VisitForm> {
                               ),
                               textCapitalization: TextCapitalization.sentences,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 fontWeight: 500,
                                 color: themeData.colorScheme.onBackground,
                               ),
@@ -460,7 +455,7 @@ class _VisitFormState extends State<VisitForm> {
                                     .inputDecorationTheme.focusedBorder,
                               ),
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 fontWeight: 500,
                                 color: themeData.colorScheme.onBackground,
                               ),
@@ -486,7 +481,7 @@ class _VisitFormState extends State<VisitForm> {
                                   FilteringTextInputFormatter.digitsOnly
                                 ],
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText1,
+                                  themeData.textTheme.bodyLarge,
                                   fontWeight: 500,
                                   color: themeData.colorScheme.onBackground,
                                 ),
@@ -508,7 +503,7 @@ class _VisitFormState extends State<VisitForm> {
                               ),
                               textCapitalization: TextCapitalization.sentences,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 fontWeight: 500,
                                 color: themeData.colorScheme.onBackground,
                               ),
@@ -522,9 +517,8 @@ class _VisitFormState extends State<VisitForm> {
                         Text(
                           "${AppLocalizations.of(context).translate('visited_address')} : ",
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 600,
-                            color: themeData.colorScheme.primaryVariant,
                           ),
                         ),
                         ElevatedButton.icon(
@@ -569,9 +563,8 @@ class _VisitFormState extends State<VisitForm> {
                         Text(
                           "${AppLocalizations.of(context).translate('discussions_with_the_contact')} : ",
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 600,
-                            color: themeData.colorScheme.primaryVariant,
                           ),
                         ),
                         Padding(
@@ -590,7 +583,7 @@ class _VisitFormState extends State<VisitForm> {
                             ),
                             textCapitalization: TextCapitalization.sentences,
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.bodyLarge,
                               fontWeight: 500,
                               color: themeData.colorScheme.onBackground,
                             ),
@@ -680,7 +673,7 @@ class _VisitFormState extends State<VisitForm> {
                         child: Text(
                             AppLocalizations.of(context).translate('update'),
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 color: themeData.colorScheme.onPrimary,
                                 letterSpacing: 0.3)),
                       ),
@@ -786,10 +779,10 @@ class _FollowUpFormState extends State<FollowUpForm> {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-            (widget.edit == true)
-                ? "${AppLocalizations.of(context).translate('edit_follow_up')}"
-                : "${AppLocalizations.of(context).translate('add_follow_up')}",
-            style: themeData.appBarTheme.textTheme!.headline6),
+          (widget.edit == true)
+              ? "${AppLocalizations.of(context).translate('edit_follow_up')}"
+              : "${AppLocalizations.of(context).translate('add_follow_up')}",
+        ),
       ),
       body: Container(
         height: MySize.screenHeight,
@@ -802,7 +795,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                   Text(
                     "${AppLocalizations.of(context).translate('customer_name')}:",
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText2,
+                      themeData.textTheme.bodyMedium,
                       fontWeight: 500,
                       color: themeData.colorScheme.onBackground,
                     ),
@@ -810,7 +803,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                   Text(
                     widget.customerDetails['name'],
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText1,
+                      themeData.textTheme.bodyLarge,
                       fontWeight: 600,
                       color: themeData.colorScheme.onBackground,
                     ),
@@ -828,7 +821,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                           FocusScope.of(context).unfocus();
                         },
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 500,
                           color: themeData.colorScheme.onBackground,
                         ),
@@ -866,7 +859,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                               Text(
                                 "${AppLocalizations.of(context).translate('status')}:",
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.bodyMedium,
                                   fontWeight: 500,
                                   color: themeData.colorScheme.onBackground,
                                 ),
@@ -875,7 +868,8 @@ class _FollowUpFormState extends State<FollowUpForm> {
                                 width: MySize.screenWidth! * 0.45,
                                 child: DropdownButtonFormField(
                                   value: selectedStatus,
-                                  dropdownColor: themeData.backgroundColor,
+                                  dropdownColor:
+                                      themeData.colorScheme.background,
                                   icon: Icon(
                                     Icons.arrow_drop_down,
                                     color: themeData.colorScheme.onBackground,
@@ -887,7 +881,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                                         value: value,
                                         child: Text(value,
                                             style: AppTheme.getTextStyle(
-                                                themeData.textTheme.bodyText1,
+                                                themeData.textTheme.bodyLarge,
                                                 color: themeData.colorScheme
                                                     .onBackground)));
                                   }).toList(),
@@ -914,7 +908,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                               Text(
                                 "${AppLocalizations.of(context).translate('follow_up_type')}:",
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.bodyMedium,
                                   fontWeight: 500,
                                   color: themeData.colorScheme.onBackground,
                                 ),
@@ -926,12 +920,13 @@ class _FollowUpFormState extends State<FollowUpForm> {
                                   hint: Text(
                                     "${AppLocalizations.of(context).translate('please_select')}",
                                     style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.bodyLarge,
                                       fontWeight: 500,
                                       color: themeData.colorScheme.onBackground,
                                     ),
                                   ),
-                                  dropdownColor: themeData.backgroundColor,
+                                  dropdownColor:
+                                      themeData.colorScheme.background,
                                   icon: Icon(
                                     Icons.arrow_drop_down,
                                     color: themeData.colorScheme.onBackground,
@@ -943,7 +938,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                                         value: value,
                                         child: Text(value,
                                             style: AppTheme.getTextStyle(
-                                                themeData.textTheme.bodyText1,
+                                                themeData.textTheme.bodyLarge,
                                                 color: themeData.colorScheme
                                                     .onBackground)));
                                   }).toList(),
@@ -985,7 +980,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                           Text(
                             "${AppLocalizations.of(context).translate('follow_up_category')}:",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText2,
+                              themeData.textTheme.bodyMedium,
                               fontWeight: 500,
                               color: themeData.colorScheme.onBackground,
                             ),
@@ -1000,12 +995,12 @@ class _FollowUpFormState extends State<FollowUpForm> {
                               hint: Text(
                                 "${AppLocalizations.of(context).translate('please_select')}",
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText1,
+                                  themeData.textTheme.bodyLarge,
                                   fontWeight: 500,
                                   color: themeData.colorScheme.onBackground,
                                 ),
                               ),
-                              dropdownColor: themeData.backgroundColor,
+                              dropdownColor: themeData.colorScheme.background,
                               icon: Icon(
                                 Icons.arrow_drop_down,
                                 color: themeData.colorScheme.onBackground,
@@ -1017,7 +1012,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                                     value: value,
                                     child: Text(value['name'],
                                         style: AppTheme.getTextStyle(
-                                            themeData.textTheme.bodyText1,
+                                            themeData.textTheme.bodyLarge,
                                             color: themeData
                                                 .colorScheme.onBackground)));
                               }).toList(),
@@ -1049,7 +1044,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                         dateLabelText:
                             "${AppLocalizations.of(context).translate('start_datetime')}:",
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 500,
                           color: themeData.colorScheme.onBackground,
                         ),
@@ -1078,7 +1073,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                         dateLabelText:
                             "${AppLocalizations.of(context).translate('end_datetime')}:",
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 500,
                           color: themeData.colorScheme.onBackground,
                         ),
@@ -1115,7 +1110,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                         controller: descriptionController,
                         textCapitalization: TextCapitalization.sentences,
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 500,
                           color: themeData.colorScheme.onBackground,
                         ),
@@ -1132,7 +1127,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                               child: Text(
                                 "${AppLocalizations.of(context).translate('call_log_not_found')}*",
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.subtitle2,
+                                  themeData.textTheme.titleSmall,
                                   fontWeight: 500,
                                   color: themeData.colorScheme.error,
                                 ),
@@ -1157,7 +1152,7 @@ class _FollowUpFormState extends State<FollowUpForm> {
                           child: Text(
                             AppLocalizations.of(context).translate('submit'),
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.bodyLarge,
                               fontWeight: 600,
                               color: themeData.colorScheme.onPrimary,
                             ),
