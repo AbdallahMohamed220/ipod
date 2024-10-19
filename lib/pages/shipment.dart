@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 // import 'package:call_log/call_log.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +67,7 @@ class _ShipmentState extends State<Shipment> {
       appBar: AppBar(
         elevation: 0.0,
         title: Text(AppLocalizations.of(context).translate('shipment'),
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+            style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                 fontWeight: 600)),
       ),
       body: SingleChildScrollView(
@@ -117,7 +115,7 @@ class _ShipmentState extends State<Shipment> {
       ),
       onPressed: () => Navigator.pushNamed(context, '/google_map'),
       child: Text('Map',
-          style: AppTheme.getTextStyle(themeData.textTheme.subtitle1,
+          style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
               color: themeData.colorScheme.onBackground)),
     );
   }
@@ -153,12 +151,12 @@ class _ShipmentState extends State<Shipment> {
               value: value,
               height: MySize.size36!,
               child: Text(value,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       color: themeData.colorScheme.onBackground)),
             );
           }).toList();
         },
-        color: themeData.backgroundColor,
+        color: themeData.colorScheme.background,
         child: Container(
           padding: EdgeInsets.only(
               left: MySize.size12!,
@@ -175,7 +173,7 @@ class _ShipmentState extends State<Shipment> {
               Text(
                 selectedStatus!,
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.bodyText1,
+                  themeData.textTheme.bodyLarge,
                   color: themeData.colorScheme.onBackground,
                 ),
               ),
@@ -207,12 +205,12 @@ class _ShipmentState extends State<Shipment> {
             value: value,
             height: MySize.size36!,
             child: Text(value,
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     color: themeData.colorScheme.onBackground)),
           );
         }).toList();
       },
-      color: themeData.backgroundColor,
+      color: themeData.colorScheme.background,
       child: Container(
         padding: EdgeInsets.only(
             left: MySize.size12!,
@@ -229,7 +227,7 @@ class _ShipmentState extends State<Shipment> {
             Text(
               selectedInlineStatus!,
               style: AppTheme.getTextStyle(
-                themeData.textTheme.bodyText1,
+                themeData.textTheme.bodyLarge,
                 color: themeData.colorScheme.onBackground,
               ),
             ),
@@ -287,7 +285,7 @@ class _ShipmentState extends State<Shipment> {
                     Text(
                       '#$invoiceNo',
                       style: AppTheme.getTextStyle(
-                        themeData.textTheme.subtitle1,
+                        themeData.textTheme.titleMedium,
                         fontWeight: 600,
                         color: themeData.colorScheme.onBackground,
                       ),
@@ -303,7 +301,7 @@ class _ShipmentState extends State<Shipment> {
                     Text(
                       " $customerName",
                       style: AppTheme.getTextStyle(
-                        themeData.textTheme.subtitle1,
+                        themeData.textTheme.titleMedium,
                         fontWeight: 600,
                         color: themeData.colorScheme.onBackground,
                       ),
@@ -319,7 +317,7 @@ class _ShipmentState extends State<Shipment> {
                     Text(
                       ' $date',
                       style: AppTheme.getTextStyle(
-                        themeData.textTheme.subtitle1,
+                        themeData.textTheme.titleMedium,
                         color: themeData.colorScheme.onBackground,
                       ),
                     ),
@@ -348,7 +346,7 @@ class _ShipmentState extends State<Shipment> {
                               Text(
                                 ' $contactNo',
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.headline6,
+                                  themeData.textTheme.titleLarge,
                                 ),
                               ),
                             ],
@@ -364,7 +362,7 @@ class _ShipmentState extends State<Shipment> {
                               Text(
                                 ' $deliverTo',
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.headline6,
+                                  themeData.textTheme.titleLarge,
                                   fontWeight: 700,
                                   color: themeData.primaryColor,
                                 ),
@@ -403,7 +401,7 @@ class _ShipmentState extends State<Shipment> {
                           child: Text(
                             status.toString().toUpperCase(),
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.bodyLarge,
                               color: themeData.colorScheme.onBackground,
                             ),
                           )),
@@ -422,7 +420,7 @@ class _ShipmentState extends State<Shipment> {
                       child: Text(
                         '${shipments[index]['shipping_address']}',
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           color: themeData.colorScheme.onBackground,
                         ),
                       ),
@@ -490,13 +488,13 @@ class _ShipmentState extends State<Shipment> {
                     title: Text(
                       "${AppLocalizations.of(context).translate('shipping_details')} : ",
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 600),
                     ),
                     subtitle: Text(
                       '$details',
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 500),
                     ),
                     isThreeLine: true,
@@ -505,13 +503,13 @@ class _ShipmentState extends State<Shipment> {
                     title: Text(
                       "${AppLocalizations.of(context).translate('shipping_address')} : ",
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 600),
                     ),
                     subtitle: Text(
                       '$address',
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.bodyLarge,
                           fontWeight: 500),
                     ),
                     isThreeLine: true,
@@ -532,9 +530,7 @@ class _ShipmentState extends State<Shipment> {
             ),
             actions: <Widget>[
               TextButton(
-                style: TextButton.styleFrom(
-                  primary: Colors.blue,
-                ),
+                style: TextButton.styleFrom(),
                 onPressed: () async {
                   var data = ShipmentModel().updateShipment(
                       id: shipments[index]['id'],

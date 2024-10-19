@@ -87,7 +87,7 @@ class _CustomerState extends State<Customer> {
         appBar: AppBar(
           elevation: 0,
           title: Text(AppLocalizations.of(context).translate('customer'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   fontWeight: 600)),
         ),
         floatingActionButton: FloatingActionButton(
@@ -133,7 +133,6 @@ class _CustomerState extends State<Customer> {
                 child: TextButton(
                   onPressed: (addQuotation),
                   style: TextButton.styleFrom(
-                      primary: Colors.black,
                       backgroundColor: style.StyleColors().mainColor(1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40.0),
@@ -148,7 +147,7 @@ class _CustomerState extends State<Customer> {
                       Text(
                         AppLocalizations.of(context).translate('add_quotation'),
                         style: AppTheme.getTextStyle(
-                            Theme.of(context).textTheme.bodyText1,
+                            Theme.of(context).textTheme.bodyLarge,
                             color: Theme.of(context).colorScheme.surface),
                       ),
                     ],
@@ -204,13 +203,11 @@ class _CustomerState extends State<Customer> {
         return AlertDialog(
           backgroundColor: customAppTheme.bgLayer1,
           title: Text(AppLocalizations.of(context).translate('quotation'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   color: themeData.colorScheme.onBackground, fontWeight: 700)),
           actions: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: themeData.colorScheme.primary,
-              ),
+              style: ElevatedButton.styleFrom(),
               onPressed: () async {
                 if (argument!['sellId'] != null) {
                   //update sell
@@ -229,9 +226,7 @@ class _CustomerState extends State<Customer> {
               child: Text(AppLocalizations.of(context).translate('save')),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: themeData.colorScheme.primary,
-              ),
+              style: ElevatedButton.styleFrom(),
               onPressed: () async {
                 await SellDatabase().storeSell(sell).then((value) async {
                   SellDatabase()
@@ -302,13 +297,13 @@ class _CustomerState extends State<Customer> {
                                       width: 50,
                                       child: TextFormField(
                                         controller: prefix,
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleSmall!
                                             .merge(TextStyle(
                                                 color: themeData
                                                     .colorScheme.onBackground)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
@@ -358,13 +353,13 @@ class _CustomerState extends State<Customer> {
                                             return null;
                                           }
                                         },
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleSmall!
                                             .merge(TextStyle(
                                                 color: themeData
                                                     .colorScheme.onBackground)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
@@ -409,13 +404,13 @@ class _CustomerState extends State<Customer> {
                                       width: MySize.screenWidth! * 0.35,
                                       child: TextFormField(
                                         controller: middleName,
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleSmall!
                                             .merge(TextStyle(
                                                 color: themeData
                                                     .colorScheme.onBackground)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
@@ -454,13 +449,13 @@ class _CustomerState extends State<Customer> {
                                       width: MySize.screenWidth! * 0.35,
                                       child: TextFormField(
                                         controller: lastName,
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleSmall!
                                             .merge(TextStyle(
                                                 color: themeData
                                                     .colorScheme.onBackground)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
@@ -525,12 +520,12 @@ class _CustomerState extends State<Customer> {
                                 children: <Widget>[
                                   TextFormField(
                                     controller: addressLine1,
-                                    style: themeData.textTheme.subtitle2!.merge(
-                                        TextStyle(
+                                    style: themeData.textTheme.titleSmall!
+                                        .merge(TextStyle(
                                             color: themeData
                                                 .colorScheme.onBackground)),
                                     decoration: InputDecoration(
-                                      hintStyle: themeData.textTheme.subtitle2!
+                                      hintStyle: themeData.textTheme.titleSmall!
                                           .merge(TextStyle(
                                               color: themeData
                                                   .colorScheme.onBackground)),
@@ -566,12 +561,12 @@ class _CustomerState extends State<Customer> {
                                   ),
                                   TextFormField(
                                     controller: addressLine2,
-                                    style: themeData.textTheme.subtitle2!.merge(
-                                        TextStyle(
+                                    style: themeData.textTheme.titleSmall!
+                                        .merge(TextStyle(
                                             color: themeData
                                                 .colorScheme.onBackground)),
                                     decoration: InputDecoration(
-                                      hintStyle: themeData.textTheme.subtitle2!
+                                      hintStyle: themeData.textTheme.titleSmall!
                                           .merge(TextStyle(
                                               color: themeData
                                                   .colorScheme.onBackground)),
@@ -644,12 +639,12 @@ class _CustomerState extends State<Customer> {
                                         return null;
                                       }
                                     },
-                                    style: themeData.textTheme.subtitle2!.merge(
-                                        TextStyle(
+                                    style: themeData.textTheme.titleSmall!
+                                        .merge(TextStyle(
                                             color: themeData
                                                 .colorScheme.onBackground)),
                                     decoration: InputDecoration(
-                                      hintStyle: themeData.textTheme.subtitle2!
+                                      hintStyle: themeData.textTheme.titleSmall!
                                           .merge(TextStyle(
                                               color: themeData
                                                   .colorScheme.onBackground)),
@@ -718,13 +713,13 @@ class _CustomerState extends State<Customer> {
                                         width: MySize.screenWidth! * 0.35,
                                         child: TextFormField(
                                           controller: city,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData.textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleSmall!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
                                                         .onBackground)),
@@ -764,13 +759,13 @@ class _CustomerState extends State<Customer> {
                                         width: MySize.screenWidth! * 0.35,
                                         child: TextFormField(
                                           controller: state,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData.textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleSmall!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
                                                         .onBackground)),
@@ -816,13 +811,13 @@ class _CustomerState extends State<Customer> {
                                         width: MySize.screenWidth! * 0.35,
                                         child: TextFormField(
                                           controller: country,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData.textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleSmall!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
                                                         .onBackground)),
@@ -863,13 +858,13 @@ class _CustomerState extends State<Customer> {
                                         child: TextFormField(
                                           controller: zip,
                                           keyboardType: TextInputType.number,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData.textTheme.titleSmall!
                                               .merge(TextStyle(
                                                   color: themeData.colorScheme
                                                       .onBackground)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleSmall!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
                                                         .onBackground)),
@@ -968,7 +963,7 @@ class _CustomerState extends State<Customer> {
                                 .translate('add_to_contact')
                                 .toUpperCase(),
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.bodyLarge,
                                 color: themeData.colorScheme.onPrimary,
                                 letterSpacing: 0.3)),
                       ),
@@ -1001,7 +996,7 @@ class _CustomerState extends State<Customer> {
                   softWrap: true,
                   maxLines: 5,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       color: themeData.colorScheme.onBackground)),
             ));
       }).toList(),

@@ -102,7 +102,7 @@ class CartState extends State<Cart> {
       appBar: AppBar(
         elevation: 0,
         title: Text(AppLocalizations.of(context).translate('cart'),
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+            style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                 fontWeight: 600)),
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -127,7 +127,6 @@ class CartState extends State<Cart> {
                   bottom: MySize.size8!,
                   top: MySize.size8!),
               decoration: BoxDecoration(
-                color: themeData.backgroundColor,
                 borderRadius: BorderRadius.all(Radius.circular(MySize.size16!)),
                 boxShadow: [
                   BoxShadow(
@@ -171,15 +170,15 @@ class CartState extends State<Cart> {
                         AppLocalizations.of(context).translate('sub_total') +
                             ' : ',
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         )),
                     Text(symbol + Helper().formatCurrency(calculateSubTotal()),
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         )),
                   ],
                 ),
@@ -194,8 +193,8 @@ class CartState extends State<Cart> {
               children: <Widget>[
                 Text(
                   AppLocalizations.of(context).translate('discount') + ' : ',
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
-                      color: themeData.colorScheme.onBackground,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                      color: themeData.colorScheme.onSurface,
                       fontWeight: 600,
                       muted: true),
                 ),
@@ -216,7 +215,7 @@ class CartState extends State<Cart> {
                             themeData.inputDecorationTheme.focusedBorder,
                       ),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 400,
                           letterSpacing: -0.2),
                       textAlign: TextAlign.end,
@@ -256,8 +255,8 @@ class CartState extends State<Cart> {
               children: <Widget>[
                 Text(
                   AppLocalizations.of(context).translate('tax') + ' : ',
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
-                      color: themeData.colorScheme.onBackground,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                      color: themeData.colorScheme.onSurface,
                       fontWeight: 600,
                       muted: true),
                 ),
@@ -265,9 +264,9 @@ class CartState extends State<Cart> {
                 Text(
                   AppLocalizations.of(context).translate('total') + ' : ',
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.subtitle1,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 700,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
                 Text(
@@ -275,9 +274,9 @@ class CartState extends State<Cart> {
                         Helper().formatCurrency(calculateSubtotal(selectedTaxId,
                             selectedDiscountType, discountAmount)),
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.subtitle1,
+                      themeData.textTheme.titleMedium,
                       fontWeight: 700,
-                      color: themeData.colorScheme.onBackground,
+                      color: themeData.colorScheme.onSurface,
                       letterSpacing: 0,
                     ))
               ],
@@ -312,11 +311,11 @@ class CartState extends State<Cart> {
       margin: EdgeInsets.only(right: MySize.size10!, top: MySize.size8!),
       width: MySize.screenWidth! * 0.45,
       child: TextFormField(
-        style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
+        style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
             letterSpacing: 0, fontWeight: 500),
         decoration: InputDecoration(
           hintText: AppLocalizations.of(context).translate('search'),
-          hintStyle: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
+          hintStyle: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
               letterSpacing: 0, fontWeight: 500),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.all(
@@ -334,11 +333,11 @@ class CartState extends State<Cart> {
               ),
               borderSide: BorderSide.none),
           filled: true,
-          fillColor: themeData.colorScheme.background,
+          fillColor: themeData.colorScheme.surface,
           prefixIcon: Icon(
             MdiIcons.magnify,
             size: MySize.size22,
-            color: themeData.colorScheme.onBackground.withAlpha(150),
+            color: themeData.colorScheme.onSurface.withAlpha(150),
           ),
           isDense: true,
           contentPadding: EdgeInsets.only(right: MySize.size16!),
@@ -361,7 +360,6 @@ class CartState extends State<Cart> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: customAppTheme.bgLayer1,
           content: Container(
             color: customAppTheme.bgLayer1,
             height: MySize.screenHeight! * 0.8,
@@ -383,7 +381,7 @@ class CartState extends State<Cart> {
                                 Helper()
                                     .formatCurrency(items[index]['unit_price']),
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText2,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 700,
                                 letterSpacing: 0),
                           ),
@@ -412,7 +410,7 @@ class CartState extends State<Cart> {
                                       Helper().formatQuantity(
                                           items[index]['stock_available']),
                                       style: AppTheme.getTextStyle(
-                                          themeData.textTheme.caption,
+                                          themeData.textTheme.titleMedium,
                                           fontSize: 11,
                                           color:
                                               themeData.colorScheme.onPrimary,
@@ -570,8 +568,8 @@ class CartState extends State<Cart> {
                             ? TextOverflow.visible
                             : TextOverflow.ellipsis,
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText1,
-                            color: themeData.colorScheme.onBackground,
+                            themeData.textTheme.titleMedium,
+                            color: themeData.colorScheme.onSurface,
                             fontWeight: 600),
                       ),
                     ),
@@ -599,9 +597,9 @@ class CartState extends State<Cart> {
                                                     cartItems[index]
                                                         ['unit_price']),
                                             style: AppTheme.getTextStyle(
-                                                themeData.textTheme.bodyText1,
+                                                themeData.textTheme.titleMedium,
                                                 color: themeData
-                                                    .colorScheme.onBackground,
+                                                    .colorScheme.onSurface,
                                                 fontWeight: 600,
                                                 letterSpacing: -0.2,
                                                 muted: true),
@@ -640,7 +638,7 @@ class CartState extends State<Cart> {
                                                     size: MySize.size20,
                                                   ),
                                                   color: themeData
-                                                      .colorScheme.onBackground,
+                                                      .colorScheme.onSurface,
                                                   onPressed: () {
                                                     setState(() {
                                                       (editItem == index)
@@ -652,7 +650,7 @@ class CartState extends State<Cart> {
                                                   icon: Icon(MdiIcons.delete,
                                                       size: MySize.size20),
                                                   color: themeData
-                                                      .colorScheme.onBackground,
+                                                      .colorScheme.onSurface,
                                                   onPressed: () {
                                                     showDialog(
                                                       barrierDismissible: true,
@@ -681,10 +679,10 @@ class CartState extends State<Cart> {
                                                                 style: AppTheme.getTextStyle(
                                                                     themeData
                                                                         .textTheme
-                                                                        .headline6,
+                                                                        .titleLarge,
                                                                     color: themeData
                                                                         .colorScheme
-                                                                        .onBackground,
+                                                                        .onSurface,
                                                                     fontWeight:
                                                                         600),
                                                                 textAlign:
@@ -869,7 +867,7 @@ class CartState extends State<Cart> {
                                                 MdiIcons.plus,
                                                 size: MySize.size20,
                                                 color: themeData
-                                                    .colorScheme.onBackground,
+                                                    .colorScheme.onSurface,
                                               ),
                                             ),
                                           ),
@@ -906,7 +904,7 @@ class CartState extends State<Cart> {
                                                 MdiIcons.minus,
                                                 size: MySize.size20,
                                                 color: themeData
-                                                    .colorScheme.onBackground,
+                                                    .colorScheme.onSurface,
                                               ),
                                             ),
                                           ),
@@ -958,7 +956,7 @@ class CartState extends State<Cart> {
                                 themeData.inputDecorationTheme.focusedBorder,
                           ),
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle2,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 400,
                               letterSpacing: -0.2),
                           textAlign: TextAlign.end,
@@ -1008,7 +1006,7 @@ class CartState extends State<Cart> {
                                 themeData.inputDecorationTheme.focusedBorder,
                           ),
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle2,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 400,
                               letterSpacing: -0.2),
                           textAlign: TextAlign.end,
@@ -1059,7 +1057,7 @@ class CartState extends State<Cart> {
     //taxId, varId
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
+          dropdownColor: themeData.primaryColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),
@@ -1085,7 +1083,7 @@ class CartState extends State<Cart> {
   Widget inLineDiscount(index) {
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
+          dropdownColor: themeData.primaryColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),
@@ -1108,7 +1106,7 @@ class CartState extends State<Cart> {
   Widget discount() {
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
+          dropdownColor: themeData.primaryColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),
@@ -1134,7 +1132,7 @@ class CartState extends State<Cart> {
   Widget taxes() {
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
+          dropdownColor: themeData.primaryColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),

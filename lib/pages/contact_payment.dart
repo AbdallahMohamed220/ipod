@@ -61,7 +61,7 @@ class _ContactPaymentState extends State<ContactPayment> {
       appBar: AppBar(
         elevation: 0.0,
         title: Text(AppLocalizations.of(context).translate('contact_payment'),
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+            style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                 fontWeight: 600)),
       ),
       body: SingleChildScrollView(
@@ -83,7 +83,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                               .translate('due')
                               .toUpperCase(),
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
                               letterSpacing: -0.2),
                         ),
@@ -91,7 +91,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                         Text(
                           Helper().formatCurrency(due),
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.headline5,
+                              themeData.textTheme.headlineSmall,
                               fontWeight: 600,
                               letterSpacing: -0.2),
                         ),
@@ -129,7 +129,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                           },
                           textAlign: TextAlign.end,
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle2,
+                              themeData.textTheme.titleSmall,
                               fontWeight: 400,
                               letterSpacing: -0.2),
                           inputFormatters: [
@@ -149,7 +149,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                                       .translate('location') +
                                   ' : ',
                               style: AppTheme.getTextStyle(
-                                  themeData.textTheme.headline6,
+                                  themeData.textTheme.titleLarge,
                                   fontWeight: 700,
                                   letterSpacing: -0.2),
                             ),
@@ -172,16 +172,14 @@ class _ContactPaymentState extends State<ContactPayment> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: themeData.colorScheme.primary,
-                      ),
+                      style: ElevatedButton.styleFrom(),
                       onPressed: () async {
                         await onSubmit();
                       },
                       child: Text(
                         AppLocalizations.of(context).translate('submit'),
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.headline6,
+                            themeData.textTheme.titleLarge,
                             color: themeData.colorScheme.onPrimary,
                             fontWeight: 700,
                             letterSpacing: -0.2),
@@ -236,7 +234,7 @@ class _ContactPaymentState extends State<ContactPayment> {
       children: [
         Text(
           AppLocalizations.of(context).translate('select_customer') + ' : ',
-          style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+          style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
               fontWeight: 700, letterSpacing: -0.2),
         ),
         SearchChoices.single(
@@ -256,7 +254,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                       maxLines: 5,
                       overflow: TextOverflow.ellipsis,
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.bodyMedium,
                           color: themeData.colorScheme.onBackground)),
                 ));
           }).toList(),
@@ -334,12 +332,12 @@ class _ContactPaymentState extends State<ContactPayment> {
               value: value,
               height: MySize.size36!,
               child: Text(value['name'],
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       color: themeData.colorScheme.onBackground)),
             );
           }).toList();
         },
-        color: themeData.backgroundColor,
+        color: themeData.colorScheme.background,
         child: Container(
           padding: EdgeInsets.only(
               left: MySize.size12!,
@@ -356,7 +354,7 @@ class _ContactPaymentState extends State<ContactPayment> {
               Text(
                 selectedLocation['name'],
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.bodyText1,
+                  themeData.textTheme.bodyLarge,
                   color: themeData.colorScheme.onBackground,
                 ),
               ),
@@ -447,7 +445,7 @@ class _ContactPaymentState extends State<ContactPayment> {
       children: <Widget>[
         Text(
           AppLocalizations.of(context).translate('payment_method') + ' : ',
-          style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+          style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
               fontWeight: 700, letterSpacing: -0.2),
         ),
         PopupMenuButton(
@@ -468,12 +466,12 @@ class _ContactPaymentState extends State<ContactPayment> {
                 value: value,
                 height: MySize.size36!,
                 child: Text(value['value'],
-                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                         color: themeData.colorScheme.onBackground)),
               );
             }).toList();
           },
-          color: themeData.backgroundColor,
+          color: themeData.colorScheme.background,
           child: Container(
             padding: EdgeInsets.only(
                 left: MySize.size12!,
@@ -490,7 +488,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                 Text(
                   selectedPaymentMethod['value'],
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.bodyLarge,
                     color: themeData.colorScheme.onBackground,
                   ),
                 ),
@@ -516,7 +514,7 @@ class _ContactPaymentState extends State<ContactPayment> {
       children: <Widget>[
         Text(
           AppLocalizations.of(context).translate('payment_account') + ' : ',
-          style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+          style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
               fontWeight: 700, letterSpacing: -0.2),
         ),
         PopupMenuButton(
@@ -533,12 +531,12 @@ class _ContactPaymentState extends State<ContactPayment> {
                 value: value,
                 height: MySize.size36!,
                 child: Text(value['name'],
-                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                         color: themeData.colorScheme.onBackground)),
               );
             }).toList();
           },
-          color: themeData.backgroundColor,
+          color: themeData.colorScheme.background,
           child: Container(
             padding: EdgeInsets.only(
                 left: MySize.size12!,
@@ -555,7 +553,7 @@ class _ContactPaymentState extends State<ContactPayment> {
                 Text(
                   selectedPaymentAccount['name'],
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.bodyLarge,
                     color: themeData.colorScheme.onBackground,
                   ),
                 ),

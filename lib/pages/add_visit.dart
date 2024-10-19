@@ -54,7 +54,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
         title: Text(
           AppLocalizations.of(context).translate('add_visit'),
           style: AppTheme.getTextStyle(
-            themeData.textTheme.subtitle1,
+            themeData.textTheme.titleMedium,
             fontWeight: 600,
           ),
         ),
@@ -76,7 +76,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                           Text(
                             "${AppLocalizations.of(context).translate('Whom_you_will_be_visiting')}*",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.headline6,
+                              themeData.textTheme.titleLarge,
                               fontWeight: 600,
                             ),
                           ),
@@ -132,7 +132,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                                 Text(
                                   "${AppLocalizations.of(context).translate('person_or_company')} : ",
                                   style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle1,
+                                    themeData.textTheme.titleMedium,
                                     fontWeight: 600,
                                   ),
                                 ),
@@ -160,9 +160,9 @@ class _NewVisitFormState extends State<NewVisitForm> {
                                     textCapitalization:
                                         TextCapitalization.sentences,
                                     style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.titleMedium,
                                       fontWeight: 500,
-                                      color: themeData.colorScheme.onBackground,
+                                      color: themeData.colorScheme.onSurface,
                                     ),
                                   ),
                                 ),
@@ -174,7 +174,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                                 Text(
                                   "${AppLocalizations.of(context).translate('visit_address')} : ",
                                   style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle1,
+                                    themeData.textTheme.titleMedium,
                                     fontWeight: 600,
                                   ),
                                 ),
@@ -204,9 +204,9 @@ class _NewVisitFormState extends State<NewVisitForm> {
                                     textCapitalization:
                                         TextCapitalization.sentences,
                                     style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.titleMedium,
                                       fontWeight: 500,
-                                      color: themeData.colorScheme.onBackground,
+                                      color: themeData.colorScheme.onSurface,
                                     ),
                                   ),
                                 ),
@@ -223,7 +223,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                             Text(
                               "${AppLocalizations.of(context).translate('contacts')} : ",
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.subtitle1,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 600,
                               ),
                             ),
@@ -237,7 +237,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                           Text(
                             "${AppLocalizations.of(context).translate('visit_on')} : ",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
                             ),
                           ),
@@ -252,7 +252,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                               lastDate: DateTime.now().add(Duration(days: 366)),
                               dateMask: 'yyyy-MM-dd  hh:mm',
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 700,
                                 color: themeData.colorScheme.primary,
                               ),
@@ -271,7 +271,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                           Text(
                             "${AppLocalizations.of(context).translate('purpose_of_visiting')} : ",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.subtitle1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
                             ),
                           ),
@@ -291,9 +291,9 @@ class _NewVisitFormState extends State<NewVisitForm> {
                               ),
                               textCapitalization: TextCapitalization.sentences,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 500,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                           ),
@@ -352,7 +352,7 @@ class _NewVisitFormState extends State<NewVisitForm> {
                           child: Text(
                               AppLocalizations.of(context).translate('save'),
                               style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText1,
+                                  themeData.textTheme.titleMedium,
                                   color: themeData.colorScheme.onPrimary,
                                   letterSpacing: 0.3)),
                         ),
@@ -379,12 +379,16 @@ class _NewVisitFormState extends State<NewVisitForm> {
             value: jsonEncode(value),
             child: Container(
               width: MySize.screenWidth! * 0.8,
-              child: Text("${value['name']} (${value['mobile'] ?? ' - '})",
-                  softWrap: true,
-                  maxLines: 5,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
-                      color: themeData.colorScheme.onBackground)),
+              child: Text(
+                "${value['name']} (${value['mobile'] ?? ' - '})",
+                softWrap: true,
+                maxLines: 5,
+                overflow: TextOverflow.ellipsis,
+                style: AppTheme.getTextStyle(
+                  themeData.textTheme.titleMedium,
+                  color: themeData.colorScheme.onSurface,
+                ),
+              ),
             ));
       }).toList(),
       // value: customerListMap[0],

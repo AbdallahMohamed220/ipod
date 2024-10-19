@@ -69,11 +69,11 @@ Widget bottomBarMenu(context, route, name, isSelected, icon,
           ),
           (isSelected)
               ? Padding(
-            padding: const EdgeInsets.only(left: 4.0),
+                  padding: const EdgeInsets.only(left: 4.0),
                   child: Text(
                     name,
                     style: AppTheme.getTextStyle(
-                        Theme.of(context).textTheme.bodyText1,
+                        Theme.of(context).textTheme.titleMedium,
                         color: Theme.of(context).colorScheme.surface),
                   ),
                 )

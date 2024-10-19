@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-
 // import 'package:call_log/call_log.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:cron/cron.dart';
@@ -350,9 +349,9 @@ class Helper {
           child: Text(
             AppLocalizations.of(context).translate('no_data'),
             style: AppTheme.getTextStyle(
-              themeData.textTheme.headline5,
+              themeData.textTheme.titleLarge,
               fontWeight: 600,
-              color: themeData.colorScheme.onBackground,
+              color: themeData.colorScheme.onSurface,
             ),
           ),
         )

@@ -109,7 +109,7 @@ class _FieldForceState extends State<FieldForce> {
           ],
           title: Text(
               AppLocalizations.of(context).translate('field_force_visits'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   fontWeight: 600)),
         ),
         body: Column(
@@ -125,9 +125,9 @@ class _FieldForceState extends State<FieldForce> {
                   fillColor: themeData.colorScheme.primary,
                   color: themeData.colorScheme.primary,
                   textStyle: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText1,
+                      themeData.textTheme.titleMedium,
                       fontWeight: 600,
-                      color: themeData.colorScheme.onBackground),
+                      color: themeData.colorScheme.onSurface),
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(MySize.size10!),
@@ -262,10 +262,11 @@ class _FieldForceState extends State<FieldForce> {
                                               child: Text(
                                                 '${fieldForceList[index]['contact']['name']}',
                                                 style: AppTheme.getTextStyle(
-                                                  themeData.textTheme.bodyText1,
+                                                  themeData
+                                                      .textTheme.titleMedium,
                                                   fontWeight: 500,
                                                   color: themeData
-                                                      .colorScheme.onBackground,
+                                                      .colorScheme.onSurface,
                                                 ),
                                               ),
                                             ),
@@ -277,10 +278,11 @@ class _FieldForceState extends State<FieldForce> {
                                               child: Text(
                                                 '${fieldForceList[index]['contact']['supplier_business_name']}',
                                                 style: AppTheme.getTextStyle(
-                                                  themeData.textTheme.bodyText1,
+                                                  themeData
+                                                      .textTheme.titleMedium,
                                                   fontWeight: 500,
                                                   color: themeData
-                                                      .colorScheme.onBackground,
+                                                      .colorScheme.onSurface,
                                                 ),
                                               ),
                                             ),
@@ -305,11 +307,11 @@ class _FieldForceState extends State<FieldForce> {
                                                           style: AppTheme
                                                               .getTextStyle(
                                                             themeData.textTheme
-                                                                .bodyText1,
+                                                                .titleMedium,
                                                             fontWeight: 500,
                                                             color: themeData
                                                                 .colorScheme
-                                                                .onBackground,
+                                                                .onSurface,
                                                           ),
                                                           overflow: TextOverflow
                                                               .ellipsis,
@@ -327,11 +329,11 @@ class _FieldForceState extends State<FieldForce> {
                                                           style: AppTheme
                                                               .getTextStyle(
                                                             themeData.textTheme
-                                                                .bodyText1,
+                                                                .titleMedium,
                                                             fontWeight: 500,
                                                             color: themeData
                                                                 .colorScheme
-                                                                .onBackground,
+                                                                .onSurface,
                                                           ),
                                                           overflow: TextOverflow
                                                               .ellipsis,
@@ -352,11 +354,11 @@ class _FieldForceState extends State<FieldForce> {
                                                           style: AppTheme
                                                               .getTextStyle(
                                                             themeData.textTheme
-                                                                .bodyText1,
+                                                                .titleMedium,
                                                             fontWeight: 500,
                                                             color: themeData
                                                                 .colorScheme
-                                                                .onBackground,
+                                                                .onSurface,
                                                           ),
                                                           overflow: TextOverflow
                                                               .ellipsis,
@@ -377,7 +379,7 @@ class _FieldForceState extends State<FieldForce> {
                                                             .mapMarkerRightOutline,
                                                         color: themeData
                                                             .colorScheme
-                                                            .onBackground,
+                                                            .onSurface,
                                                       ),
                                                       onPressed: () async {
                                                         String fullAddress =
@@ -413,10 +415,11 @@ class _FieldForceState extends State<FieldForce> {
                                                     ? '${fieldForceList[index]['visited_address']}'
                                                     : ' - ',
                                                 style: AppTheme.getTextStyle(
-                                                  themeData.textTheme.bodyText2,
+                                                  themeData
+                                                      .textTheme.titleMedium,
                                                   fontWeight: 500,
                                                   color: themeData
-                                                      .colorScheme.onBackground,
+                                                      .colorScheme.onSurface,
                                                 ),
                                               ),
                                             ),
@@ -429,8 +432,8 @@ class _FieldForceState extends State<FieldForce> {
                                                   icon: Icon(
                                                     MdiIcons
                                                         .mapMarkerRightOutline,
-                                                    color: themeData.colorScheme
-                                                        .onBackground,
+                                                    color: themeData
+                                                        .colorScheme.onSurface,
                                                   ),
                                                   onPressed: () async {
                                                     String address = (fieldForceList[
@@ -460,10 +463,10 @@ class _FieldForceState extends State<FieldForce> {
                                       Text(
                                         '${AppLocalizations.of(context).translate('meet_with')} : ',
                                         style: AppTheme.getTextStyle(
-                                          themeData.textTheme.bodyText1,
+                                          themeData.textTheme.titleMedium,
                                           fontWeight: 600,
-                                          color: themeData
-                                              .colorScheme.onBackground,
+                                          color:
+                                              themeData.colorScheme.onSurface,
                                         ),
                                       ),
                                       meetValue(
@@ -525,9 +528,9 @@ class _FieldForceState extends State<FieldForce> {
           child: Text(
             '$meetDetails',
             style: AppTheme.getTextStyle(
-              themeData.textTheme.bodyText2,
+              themeData.textTheme.titleMedium,
               fontWeight: 600,
-              color: themeData.colorScheme.onBackground,
+              color: themeData.colorScheme.onSurface,
             ),
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
@@ -549,9 +552,9 @@ class _FieldForceState extends State<FieldForce> {
             child: Text(
               '${visitDetails['contact']['supplier_business_name']}',
               style: AppTheme.getTextStyle(
-                themeData.textTheme.headline6,
+                themeData.textTheme.titleLarge,
                 fontWeight: 600,
-                color: themeData.colorScheme.onBackground,
+                color: themeData.colorScheme.onSurface,
               ),
             ),
           ),
@@ -565,7 +568,7 @@ class _FieldForceState extends State<FieldForce> {
                     Text(
                       "${visitDetails['visit_id']}",
                       style: AppTheme.getTextStyle(
-                        themeData.textTheme.subtitle1,
+                        themeData.textTheme.titleMedium,
                         fontWeight: 600,
                       ),
                     ),
@@ -577,9 +580,9 @@ class _FieldForceState extends State<FieldForce> {
                           Text(
                             "Contact Id : ",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
-                              color: themeData.colorScheme.onBackground,
+                              color: themeData.colorScheme.onSurface,
                             ),
                           ),
                           Flexible(
@@ -589,9 +592,9 @@ class _FieldForceState extends State<FieldForce> {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText2,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 500,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                           ),
@@ -606,9 +609,9 @@ class _FieldForceState extends State<FieldForce> {
                           Text(
                             "${AppLocalizations.of(context).translate('customer')} : ",
                             style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
-                              color: themeData.colorScheme.onBackground,
+                              color: themeData.colorScheme.onSurface,
                             ),
                           ),
                           Flexible(
@@ -618,9 +621,9 @@ class _FieldForceState extends State<FieldForce> {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText2,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 500,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                           ),
@@ -635,9 +638,9 @@ class _FieldForceState extends State<FieldForce> {
                             Text(
                               "${AppLocalizations.of(context).translate('assigned_to')} : ",
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 600,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                             Flexible(
@@ -647,9 +650,9 @@ class _FieldForceState extends State<FieldForce> {
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 2,
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.titleMedium,
                                   fontWeight: 500,
-                                  color: themeData.colorScheme.onBackground,
+                                  color: themeData.colorScheme.onSurface,
                                 ),
                               ),
                             )
@@ -660,9 +663,9 @@ class _FieldForceState extends State<FieldForce> {
                             Text(
                               "${AppLocalizations.of(context).translate('status')} : ",
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 600,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                             Text(
@@ -671,9 +674,9 @@ class _FieldForceState extends State<FieldForce> {
                                   : '-',
                               overflow: TextOverflow.ellipsis,
                               style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText2,
+                                themeData.textTheme.titleMedium,
                                 fontWeight: 500,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             )
                           ],
@@ -685,9 +688,9 @@ class _FieldForceState extends State<FieldForce> {
                               Text(
                                 '${AppLocalizations.of(context).translate('visit_on')} : ',
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText1,
+                                  themeData.textTheme.titleMedium,
                                   fontWeight: 600,
-                                  color: themeData.colorScheme.onBackground,
+                                  color: themeData.colorScheme.onSurface,
                                 ),
                               ),
                               Text(
@@ -695,9 +698,9 @@ class _FieldForceState extends State<FieldForce> {
                                     ? '${visitDetails['visit_on']}'
                                     : ' - ',
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.titleMedium,
                                   fontWeight: 500,
-                                  color: themeData.colorScheme.onBackground,
+                                  color: themeData.colorScheme.onSurface,
                                 ),
                               ),
                             ],
@@ -710,9 +713,9 @@ class _FieldForceState extends State<FieldForce> {
                               Text(
                                 '${AppLocalizations.of(context).translate('visited_on')} : ',
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText1,
+                                  themeData.textTheme.titleMedium,
                                   fontWeight: 600,
-                                  color: themeData.colorScheme.onBackground,
+                                  color: themeData.colorScheme.onSurface,
                                 ),
                               ),
                               Text(
@@ -720,9 +723,9 @@ class _FieldForceState extends State<FieldForce> {
                                     ? '${visitDetails['visited_on']}'
                                     : ' - ',
                                 style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.titleMedium,
                                   fontWeight: 500,
-                                  color: themeData.colorScheme.onBackground,
+                                  color: themeData.colorScheme.onSurface,
                                 ),
                               ),
                             ],
@@ -751,7 +754,7 @@ class _FieldForceState extends State<FieldForce> {
                         },
                         child: Icon(
                           MdiIcons.squareEditOutline,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         ),
                       ),
                     ),
@@ -787,7 +790,6 @@ class _FieldForceState extends State<FieldForce> {
       child: Container(
         padding: EdgeInsets.all(MySize.size12!),
         width: MediaQuery.of(context).size.width * 0.75,
-        color: themeData.backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -798,9 +800,9 @@ class _FieldForceState extends State<FieldForce> {
                   padding: EdgeInsets.all(MySize.size8!),
                   child: Text(
                     AppLocalizations.of(context).translate('filter'),
-                    style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+                    style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                         fontWeight: 600,
-                        color: themeData.colorScheme.onBackground),
+                        color: themeData.colorScheme.onSurface),
                   ),
                 ),
               ],
@@ -808,8 +810,8 @@ class _FieldForceState extends State<FieldForce> {
             Divider(),
             Text(
               "${AppLocalizations.of(context).translate('visit_status')} : ",
-              style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
-                  fontWeight: 600, color: themeData.colorScheme.onBackground),
+              style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                  fontWeight: 600, color: themeData.colorScheme.onSurface),
             ),
             fieldVisitStatus(),
             Divider(),
@@ -864,13 +866,13 @@ class _FieldForceState extends State<FieldForce> {
                       AppLocalizations.of(context)
                           .translate('check_connectivity'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
                           letterSpacing: -0.2),
                     ),
                     Icon(
                       Icons.error_outline,
-                      color: themeData.colorScheme.onBackground,
+                      color: themeData.colorScheme.onSurface,
                     )
                   ],
                 );
@@ -894,7 +896,6 @@ class _FieldForceState extends State<FieldForce> {
   Widget fieldVisitStatus() {
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),
@@ -907,9 +908,8 @@ class _FieldForceState extends State<FieldForce> {
                   '${value['value']}',
                   softWrap: true,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
-                      fontWeight: 500,
-                      color: themeData.colorScheme.onBackground),
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                      fontWeight: 500, color: themeData.colorScheme.onSurface),
                 ));
           }).toList(),
           onChanged: (String? newValue) async {

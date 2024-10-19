@@ -111,7 +111,7 @@ class _SalesState extends State<Sales> {
         appBar: AppBar(
           elevation: 0,
           title: Text(AppLocalizations.of(context).translate('sales'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   fontWeight: 600)),
           actions: <Widget>[
             TextButton(
@@ -148,7 +148,7 @@ class _SalesState extends State<Sales> {
               },
               child: Text(
                 AppLocalizations.of(context).translate('sync'),
-                style: AppTheme.getTextStyle(themeData.textTheme.subtitle1,
+                style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
                     fontWeight: (synced) ? 500 : 900, letterSpacing: -0.2),
               ),
             ),
@@ -467,7 +467,7 @@ class _SalesState extends State<Sales> {
                       AppLocalizations.of(context)
                           .translate('check_connectivity'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
                           letterSpacing: -0.2),
                     ),
@@ -489,7 +489,7 @@ class _SalesState extends State<Sales> {
   Widget currentSales() {
     return (sellList.length > 0)
         ? ListView.builder(
-        padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
             controller: _scrollController,
             shrinkWrap: true,
             itemCount: sellList.length,
@@ -551,7 +551,7 @@ class _SalesState extends State<Sales> {
                                 AppLocalizations.of(context)
                                     .translate('filter'),
                                 style: AppTheme.getTextStyle(
-                                    themeData.textTheme.headline6,
+                                    themeData.textTheme.titleLarge,
                                     color: themeData.colorScheme.primary,
                                     fontWeight: 700),
                               ),
@@ -571,7 +571,7 @@ class _SalesState extends State<Sales> {
                                     Text(
                                       "${AppLocalizations.of(context).translate('location')} : ",
                                       style: AppTheme.getTextStyle(
-                                          themeData.textTheme.bodyText1,
+                                          themeData.textTheme.bodyLarge,
                                           fontWeight: 600),
                                     ),
                                     locations()
@@ -582,7 +582,7 @@ class _SalesState extends State<Sales> {
                                     Text(
                                       "${AppLocalizations.of(context).translate('customer')} : ",
                                       style: AppTheme.getTextStyle(
-                                          themeData.textTheme.bodyText1,
+                                          themeData.textTheme.bodyLarge,
                                           fontWeight: 600),
                                     ),
                                     Expanded(child: customers())
@@ -617,7 +617,7 @@ class _SalesState extends State<Sales> {
                                                 ? "$startDateRange   -   $endDateRange"
                                                 : "Date range",
                                             style: AppTheme.getTextStyle(
-                                                themeData.textTheme.bodyText1,
+                                                themeData.textTheme.bodyLarge,
                                                 fontWeight: 600)),
                                       ],
                                     ),
@@ -632,7 +632,7 @@ class _SalesState extends State<Sales> {
                                     Text(
                                       "${AppLocalizations.of(context).translate('payment_status')} : ",
                                       style: AppTheme.getTextStyle(
-                                          themeData.textTheme.bodyText1,
+                                          themeData.textTheme.bodyLarge,
                                           fontWeight: 600),
                                     ),
                                     (paymentStatuses.length > 0)
@@ -656,14 +656,12 @@ class _SalesState extends State<Sales> {
                                             side: BorderSide(
                                                 color: themeData
                                                     .colorScheme.primary)),
-                                        onPrimary:
-                                            themeData.colorScheme.primary,
                                       ),
                                       child: Text(
                                         AppLocalizations.of(context)
                                             .translate('reset'),
                                         style: AppTheme.getTextStyle(
-                                            themeData.textTheme.button,
+                                            themeData.textTheme.labelLarge,
                                             color:
                                                 themeData.colorScheme.onPrimary,
                                             fontWeight: 600),
@@ -688,14 +686,12 @@ class _SalesState extends State<Sales> {
                                             side: BorderSide(
                                                 color: themeData
                                                     .colorScheme.primary)),
-                                        onPrimary:
-                                            themeData.colorScheme.primary,
                                       ),
                                       child: Text(
                                         AppLocalizations.of(context)
                                             .translate('ok'),
                                         style: AppTheme.getTextStyle(
-                                            themeData.textTheme.button,
+                                            themeData.textTheme.labelLarge,
                                             color:
                                                 themeData.colorScheme.onPrimary,
                                             fontWeight: 600),
@@ -794,7 +790,6 @@ class _SalesState extends State<Sales> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(MySize.size20!),
                       side: BorderSide(color: themeData.colorScheme.primary)),
-                  onPrimary: themeData.colorScheme.primary,
                 ),
                 onPressed: () {
                   setState(() {
@@ -805,7 +800,7 @@ class _SalesState extends State<Sales> {
                 },
                 child: Text(
                   AppLocalizations.of(context).translate('reset'),
-                  style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                       color: themeData.colorScheme.onPrimary),
                 ),
               ),
@@ -814,14 +809,13 @@ class _SalesState extends State<Sales> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(MySize.size20!),
                       side: BorderSide(color: themeData.colorScheme.primary)),
-                  onPrimary: themeData.colorScheme.primary,
                 ),
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 child: Text(
                   AppLocalizations.of(context).translate('ok'),
-                  style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                       color: themeData.colorScheme.onPrimary),
                 ),
               )
@@ -861,7 +855,7 @@ class _SalesState extends State<Sales> {
             children: <Widget>[
               Text(
                 time,
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     fontWeight: 600,
                     letterSpacing: -0.2,
                     color: themeData.colorScheme.onBackground.withAlpha(160)),
@@ -880,7 +874,7 @@ class _SalesState extends State<Sales> {
                             : AppLocalizations.of(context).translate('ref_no') +
                                 " $number",
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 700,
                             letterSpacing: -0.2),
                       ),
@@ -889,7 +883,7 @@ class _SalesState extends State<Sales> {
                                 .translate('invoice_amount') +
                             " $symbol $price",
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.bodyMedium,
                             fontWeight: 600,
                             letterSpacing: 0),
                       ),
@@ -899,7 +893,7 @@ class _SalesState extends State<Sales> {
                                       .translate('paid_amount') +
                                   " $symbol $paid",
                               style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.bodyMedium,
                                   fontWeight: 600,
                                   letterSpacing: 0),
                             )
@@ -909,7 +903,7 @@ class _SalesState extends State<Sales> {
                                 .translate('customer_name') +
                             ": $customerName",
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.bodyMedium,
                             fontWeight: 600,
                             letterSpacing: 0),
                       ),
@@ -918,7 +912,7 @@ class _SalesState extends State<Sales> {
                                 .translate('location_name') +
                             ": $locationName",
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.bodyMedium,
                             fontWeight: 600,
                             letterSpacing: 0),
                       ),
@@ -967,7 +961,7 @@ class _SalesState extends State<Sales> {
                                             .translate('are_you_sure'),
                                         textAlign: TextAlign.center,
                                         style: AppTheme.getTextStyle(
-                                            themeData.textTheme.bodyText1,
+                                            themeData.textTheme.bodyLarge,
                                             color: themeData
                                                 .colorScheme.onBackground,
                                             fontWeight: 600,
@@ -975,10 +969,9 @@ class _SalesState extends State<Sales> {
                                     actions: <Widget>[
                                       TextButton(
                                           style: TextButton.styleFrom(
-                                              backgroundColor: themeData
-                                                  .colorScheme.onPrimary,
-                                              primary: themeData
-                                                  .colorScheme.primary),
+                                            backgroundColor:
+                                                themeData.colorScheme.onPrimary,
+                                          ),
                                           onPressed: () {
                                             Navigator.pop(context);
                                           },
@@ -987,9 +980,8 @@ class _SalesState extends State<Sales> {
                                                   .translate('cancel'))),
                                       TextButton(
                                           style: TextButton.styleFrom(
-                                              backgroundColor: Colors.red,
-                                              primary: themeData
-                                                  .colorScheme.onError),
+                                            backgroundColor: Colors.red,
+                                          ),
                                           onPressed: () async {
                                             Navigator.pop(context);
                                             await SellDatabase().deleteSell(
@@ -1123,8 +1115,11 @@ class _SalesState extends State<Sales> {
                             : Colors.yellowAccent),
                     child: Text(
                       (isQuotation == 0) ? status.toUpperCase() : 'QUOTATION',
-                      style: AppTheme.getTextStyle(themeData.textTheme.caption,
-                          fontSize: 14, fontWeight: 700, letterSpacing: 0.2),
+                      style: AppTheme.getTextStyle(
+                          themeData.textTheme.bodySmall,
+                          fontSize: 14,
+                          fontWeight: 700,
+                          letterSpacing: 0.2),
                     ),
                   ),
                   Visibility(
@@ -1176,7 +1171,7 @@ class _SalesState extends State<Sales> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(time,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       fontWeight: 600,
                       letterSpacing: -0.2,
                       color:
@@ -1195,7 +1190,7 @@ class _SalesState extends State<Sales> {
                             : AppLocalizations.of(context).translate('ref_no') +
                                 " $number",
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 700,
                             letterSpacing: -0.2),
                       ),
@@ -1204,7 +1199,7 @@ class _SalesState extends State<Sales> {
                                 .translate('invoice_amount') +
                             " $symbol $price",
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.bodyMedium,
                             fontWeight: 600,
                             letterSpacing: 0),
                       ),
@@ -1214,7 +1209,7 @@ class _SalesState extends State<Sales> {
                                       .translate('paid_amount') +
                                   " $symbol $paid",
                               style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.bodyMedium,
                                   fontWeight: 600,
                                   letterSpacing: 0),
                             )
@@ -1225,7 +1220,7 @@ class _SalesState extends State<Sales> {
                           Text(
                             "${AppLocalizations.of(context).translate('customer_name')}: ",
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText2,
+                                themeData.textTheme.bodyMedium,
                                 fontWeight: 600,
                                 letterSpacing: 0),
                           ),
@@ -1236,7 +1231,7 @@ class _SalesState extends State<Sales> {
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
                               style: AppTheme.getTextStyle(
-                                  themeData.textTheme.bodyText2,
+                                  themeData.textTheme.bodyMedium,
                                   fontWeight: 600,
                                   letterSpacing: 0),
                             ),
@@ -1249,7 +1244,7 @@ class _SalesState extends State<Sales> {
                             ": $locationName",
                         maxLines: 3,
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.bodyMedium,
                             fontWeight: 600,
                             letterSpacing: 0),
                       ),
@@ -1287,7 +1282,7 @@ class _SalesState extends State<Sales> {
                                                 .translate('are_you_sure'),
                                             textAlign: TextAlign.center,
                                             style: AppTheme.getTextStyle(
-                                                themeData.textTheme.bodyText1,
+                                                themeData.textTheme.bodyLarge,
                                                 color: themeData
                                                     .colorScheme.onBackground,
                                                 fontWeight: 600,
@@ -1295,10 +1290,9 @@ class _SalesState extends State<Sales> {
                                         actions: <Widget>[
                                           TextButton(
                                               style: TextButton.styleFrom(
-                                                  backgroundColor: themeData
-                                                      .colorScheme.onPrimary,
-                                                  primary: themeData
-                                                      .colorScheme.primary),
+                                                backgroundColor: themeData
+                                                    .colorScheme.onPrimary,
+                                              ),
                                               onPressed: () {
                                                 Navigator.pop(context);
                                               },
@@ -1307,9 +1301,8 @@ class _SalesState extends State<Sales> {
                                                       .translate('cancel'))),
                                           TextButton(
                                               style: TextButton.styleFrom(
-                                                  backgroundColor: Colors.red,
-                                                  primary: themeData
-                                                      .colorScheme.onError),
+                                                backgroundColor: Colors.red,
+                                              ),
                                               onPressed: () async {
                                                 Navigator.pop(context);
                                                 await SellApi()
@@ -1436,7 +1429,7 @@ class _SalesState extends State<Sales> {
                         : Colors.yellowAccent),
                 child: Text(
                   (isQuotation == 0) ? status.toUpperCase() : 'QUOTATION',
-                  style: AppTheme.getTextStyle(themeData.textTheme.caption,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodySmall,
                       fontSize: 12, fontWeight: 700, letterSpacing: 0.2),
                 ),
               ),
@@ -1463,7 +1456,7 @@ class _SalesState extends State<Sales> {
               child: Text("${value['name']} (${value['mobile'] ?? ' - '})",
                   softWrap: true,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       color: themeData.colorScheme.onBackground)),
             ));
       }).toList(),
@@ -1488,12 +1481,12 @@ class _SalesState extends State<Sales> {
             return PopupMenuItem(
               value: value,
               child: Text(value['name'],
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       color: themeData.colorScheme.onBackground)),
             );
           }).toList();
         },
-        color: themeData.backgroundColor,
+        color: themeData.colorScheme.background,
         child: Container(
           padding: EdgeInsets.all(MySize.size8!),
           decoration: BoxDecoration(
@@ -1506,7 +1499,7 @@ class _SalesState extends State<Sales> {
               Text(
                 selectedLocation['name'],
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.bodyText1,
+                  themeData.textTheme.bodyLarge,
                   color: themeData.colorScheme.onBackground,
                 ),
               ),
@@ -1536,12 +1529,12 @@ class _SalesState extends State<Sales> {
             value: value,
             child: Text(
                 AppLocalizations.of(context).translate(value).toUpperCase(),
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     color: themeData.colorScheme.onBackground)),
           );
         }).toList();
       },
-      color: themeData.backgroundColor,
+      color: themeData.colorScheme.background,
       child: Container(
         padding: EdgeInsets.all(MySize.size8!),
         decoration: BoxDecoration(
@@ -1556,7 +1549,7 @@ class _SalesState extends State<Sales> {
                   .translate(selectedPaymentStatus)
                   .toUpperCase(),
               style: AppTheme.getTextStyle(
-                themeData.textTheme.bodyText1,
+                themeData.textTheme.bodyLarge,
                 color: themeData.colorScheme.onBackground,
               ),
             ),
@@ -1587,12 +1580,12 @@ class _SalesState extends State<Sales> {
             value: value,
             child: Text(
                 AppLocalizations.of(context).translate(value).toUpperCase(),
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     color: themeData.colorScheme.onBackground)),
           );
         }).toList();
       },
-      color: themeData.backgroundColor,
+      color: themeData.colorScheme.background,
       child: Container(
         padding: EdgeInsets.all(MySize.size8!),
         decoration: BoxDecoration(
@@ -1608,7 +1601,7 @@ class _SalesState extends State<Sales> {
               //     .translate(selectedInvoiceStatus)
               //     .toUpperCase(),
               style: AppTheme.getTextStyle(
-                themeData.textTheme.bodyText1,
+                themeData.textTheme.bodyLarge,
                 color: themeData.colorScheme.onBackground,
               ),
             ),

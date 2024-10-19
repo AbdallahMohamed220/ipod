@@ -100,7 +100,7 @@ class _FollowUpState extends State<FollowUp> {
           )
         ],
         title: Text(AppLocalizations.of(context).translate('follow_ups'),
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+            style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                 fontWeight: 600)),
       ),
       body: (accessFollowUp)
@@ -126,8 +126,8 @@ class _FollowUpState extends State<FollowUp> {
               selectedBorderColor: themeData.colorScheme.primary,
               fillColor: themeData.colorScheme.primary,
               color: themeData.colorScheme.primary,
-              textStyle: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
-                  fontWeight: 600, color: themeData.colorScheme.onBackground),
+              textStyle: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                  fontWeight: 600, color: themeData.colorScheme.onSurface),
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(MySize.size10!),
@@ -229,10 +229,10 @@ class _FollowUpState extends State<FollowUp> {
                                           child: Text(
                                             '${followUpList[index]['customer']['name']}',
                                             style: AppTheme.getTextStyle(
-                                              themeData.textTheme.bodyText1,
+                                              themeData.textTheme.titleMedium,
                                               fontWeight: 500,
                                               color: themeData
-                                                  .colorScheme.onBackground,
+                                                  .colorScheme.onSurface,
                                             ),
                                           ),
                                         ),
@@ -249,10 +249,10 @@ class _FollowUpState extends State<FollowUp> {
                                           child: Text(
                                             '${followUpList[index]['customer']['supplier_business_name']}',
                                             style: AppTheme.getTextStyle(
-                                              themeData.textTheme.bodyText1,
+                                              themeData.textTheme.titleMedium,
                                               fontWeight: 500,
                                               color: themeData
-                                                  .colorScheme.onBackground,
+                                                  .colorScheme.onSurface,
                                             ),
                                           ),
                                         ),
@@ -270,11 +270,11 @@ class _FollowUpState extends State<FollowUp> {
                                                       style:
                                                           AppTheme.getTextStyle(
                                                         themeData.textTheme
-                                                            .bodyText1,
+                                                            .titleMedium,
                                                         fontWeight: 500,
                                                         color: themeData
                                                             .colorScheme
-                                                            .onBackground,
+                                                            .onSurface,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -289,11 +289,11 @@ class _FollowUpState extends State<FollowUp> {
                                                       style:
                                                           AppTheme.getTextStyle(
                                                         themeData.textTheme
-                                                            .bodyText1,
+                                                            .titleMedium,
                                                         fontWeight: 500,
                                                         color: themeData
                                                             .colorScheme
-                                                            .onBackground,
+                                                            .onSurface,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -306,10 +306,11 @@ class _FollowUpState extends State<FollowUp> {
                                                 "${followUpList[index]['customer']['country'] ?? ''} "
                                                 "${followUpList[index]['customer']['zip_code'] ?? ''} ",
                                                 style: AppTheme.getTextStyle(
-                                                  themeData.textTheme.bodyText1,
+                                                  themeData
+                                                      .textTheme.titleMedium,
                                                   fontWeight: 500,
                                                   color: themeData
-                                                      .colorScheme.onBackground,
+                                                      .colorScheme.onSurface,
                                                 ),
                                                 overflow: TextOverflow.ellipsis,
                                                 maxLines: 2,
@@ -322,11 +323,11 @@ class _FollowUpState extends State<FollowUp> {
                                                       style:
                                                           AppTheme.getTextStyle(
                                                         themeData.textTheme
-                                                            .bodyText1,
+                                                            .titleMedium,
                                                         fontWeight: 500,
                                                         color: themeData
                                                             .colorScheme
-                                                            .onBackground,
+                                                            .onSurface,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -343,11 +344,11 @@ class _FollowUpState extends State<FollowUp> {
                                                       style:
                                                           AppTheme.getTextStyle(
                                                         themeData.textTheme
-                                                            .bodyText1,
+                                                            .titleMedium,
                                                         fontWeight: 500,
                                                         color: themeData
                                                             .colorScheme
-                                                            .onBackground,
+                                                            .onSurface,
                                                       ),
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -388,16 +389,16 @@ class _FollowUpState extends State<FollowUp> {
             child: Text(
               '${followUpDetails['customer']['supplier_business_name']}',
               style: AppTheme.getTextStyle(
-                themeData.textTheme.headline6,
+                themeData.textTheme.titleLarge,
                 fontWeight: 600,
-                color: themeData.colorScheme.onBackground,
+                color: themeData.colorScheme.onSurface,
               ),
             ),
           ),
           Text(
             '${followUpDetails['title']}',
             style: AppTheme.getTextStyle(
-              themeData.textTheme.subtitle1,
+              themeData.textTheme.titleMedium,
               fontWeight: 600,
             ),
           ),
@@ -410,9 +411,9 @@ class _FollowUpState extends State<FollowUp> {
                 Text(
                   "${AppLocalizations.of(context).translate('customer')} : ",
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 600,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
                 Flexible(
@@ -422,9 +423,9 @@ class _FollowUpState extends State<FollowUp> {
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText2,
+                      themeData.textTheme.titleMedium,
                       fontWeight: 500,
-                      color: themeData.colorScheme.onBackground,
+                      color: themeData.colorScheme.onSurface,
                     ),
                   ),
                 ),
@@ -443,18 +444,18 @@ class _FollowUpState extends State<FollowUp> {
                       Text(
                         "${AppLocalizations.of(context).translate('follow_up_type')} : ",
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 600,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         ),
                       ),
                       Text(
                         '${followUpDetails['schedule_type'].toUpperCase()}',
                         overflow: TextOverflow.ellipsis,
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 500,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         ),
                       )
                     ],
@@ -464,9 +465,9 @@ class _FollowUpState extends State<FollowUp> {
                       Text(
                         "${AppLocalizations.of(context).translate('status')} : ",
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 600,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         ),
                       ),
                       Text(
@@ -475,9 +476,9 @@ class _FollowUpState extends State<FollowUp> {
                             : '-',
                         overflow: TextOverflow.ellipsis,
                         style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 500,
-                          color: themeData.colorScheme.onBackground,
+                          color: themeData.colorScheme.onSurface,
                         ),
                       )
                     ],
@@ -489,9 +490,9 @@ class _FollowUpState extends State<FollowUp> {
                         Text(
                           '${AppLocalizations.of(context).translate('follow_up_category')} : ',
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 600,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                           ),
                         ),
                         Text(
@@ -499,9 +500,9 @@ class _FollowUpState extends State<FollowUp> {
                               ? followUpDetails['followup_category']['name']
                               : ' - ',
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 500,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                           ),
                         ),
                       ],
@@ -517,9 +518,9 @@ class _FollowUpState extends State<FollowUp> {
                         Text(
                           '${AppLocalizations.of(context).translate('start')} : ',
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 600,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                           ),
                         ),
                         Text(
@@ -528,9 +529,9 @@ class _FollowUpState extends State<FollowUp> {
                               ? '${followUpDetails['start_datetime']}'
                               : ' - ',
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 500,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                           ),
                         ),
                       ],
@@ -546,9 +547,9 @@ class _FollowUpState extends State<FollowUp> {
                         Text(
                           '${AppLocalizations.of(context).translate('end')} : ',
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText1,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 600,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                           ),
                         ),
                         Text(
@@ -556,9 +557,9 @@ class _FollowUpState extends State<FollowUp> {
                               ? '${followUpDetails['end_datetime']}'
                               : ' - ',
                           style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText2,
+                            themeData.textTheme.titleMedium,
                             fontWeight: 500,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                           ),
                         ),
                       ],
@@ -591,7 +592,7 @@ class _FollowUpState extends State<FollowUp> {
                       },
                       child: Icon(
                         MdiIcons.fileDocumentEditOutline,
-                        color: themeData.colorScheme.onBackground,
+                        color: themeData.colorScheme.onSurface,
                       ),
                     ),
                   ),
@@ -636,7 +637,6 @@ class _FollowUpState extends State<FollowUp> {
       child: Container(
         padding: EdgeInsets.all(MySize.size12!),
         width: MediaQuery.of(context).size.width * 0.75,
-        color: themeData.backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -647,9 +647,9 @@ class _FollowUpState extends State<FollowUp> {
                   padding: EdgeInsets.all(MySize.size8!),
                   child: Text(
                     AppLocalizations.of(context).translate('filter'),
-                    style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+                    style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                         fontWeight: 600,
-                        color: themeData.colorScheme.onBackground),
+                        color: themeData.colorScheme.onSurface),
                   ),
                 ),
               ],
@@ -657,15 +657,15 @@ class _FollowUpState extends State<FollowUp> {
             Divider(),
             Text(
               "${AppLocalizations.of(context).translate('follow_up_status')} : ",
-              style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
-                  fontWeight: 600, color: themeData.colorScheme.onBackground),
+              style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                  fontWeight: 600, color: themeData.colorScheme.onSurface),
             ),
             followUpStatus(),
             Divider(),
             Text(
               "${AppLocalizations.of(context).translate('follow_up_type')} : ",
-              style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
-                  fontWeight: 600, color: themeData.colorScheme.onBackground),
+              style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                  fontWeight: 600, color: themeData.colorScheme.onSurface),
             ),
             followUpType(),
             Divider(),
@@ -750,13 +750,13 @@ class _FollowUpState extends State<FollowUp> {
                       AppLocalizations.of(context)
                           .translate('check_connectivity'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
                           letterSpacing: -0.2),
                     ),
                     Icon(
                       Icons.error_outline,
-                      color: themeData.colorScheme.onBackground,
+                      color: themeData.colorScheme.onSurface,
                     )
                   ],
                 );
@@ -780,7 +780,6 @@ class _FollowUpState extends State<FollowUp> {
   Widget followUpStatus() {
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),
@@ -793,9 +792,8 @@ class _FollowUpState extends State<FollowUp> {
                   '$value',
                   softWrap: true,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
-                      fontWeight: 500,
-                      color: themeData.colorScheme.onBackground),
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                      fontWeight: 500, color: themeData.colorScheme.onSurface),
                 ));
           }).toList(),
           onChanged: (newValue) async {
@@ -810,7 +808,6 @@ class _FollowUpState extends State<FollowUp> {
   Widget followUpType() {
     return DropdownButtonHideUnderline(
       child: DropdownButton(
-          dropdownColor: themeData.backgroundColor,
           icon: Icon(
             Icons.arrow_drop_down,
           ),
@@ -822,9 +819,8 @@ class _FollowUpState extends State<FollowUp> {
                   '$value',
                   softWrap: true,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
-                      fontWeight: 500,
-                      color: themeData.colorScheme.onBackground),
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
+                      fontWeight: 500, color: themeData.colorScheme.onSurface),
                 ));
           }).toList(),
           onChanged: (newValue) async {

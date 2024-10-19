@@ -160,7 +160,7 @@ class CheckOutState extends State<CheckOut> {
         appBar: AppBar(
           elevation: 0,
           title: Text(AppLocalizations.of(context).translate('checkout'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   fontWeight: 600)),
         ),
         body: SingleChildScrollView(
@@ -188,7 +188,7 @@ class CheckOutState extends State<CheckOut> {
               dateLabelText:
                   "${AppLocalizations.of(context).translate('date')}:",
               style: AppTheme.getTextStyle(
-                themeData.textTheme.bodyText1,
+                themeData.textTheme.bodyLarge,
                 fontWeight: 700,
                 color: themeData.colorScheme.primary,
               ),
@@ -222,7 +222,7 @@ class CheckOutState extends State<CheckOut> {
                                           .translate('amount') +
                                       ' : ',
                                   style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.bodyLarge,
                                       color: themeData.colorScheme.onBackground,
                                       fontWeight: 600,
                                       muted: true)),
@@ -266,13 +266,14 @@ class CheckOutState extends State<CheckOut> {
                                           .translate('payment_method') +
                                       ' : ',
                                   style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.bodyLarge,
                                       color: themeData.colorScheme.onBackground,
                                       fontWeight: 600,
                                       muted: true)),
                               DropdownButtonHideUnderline(
                                 child: DropdownButton(
-                                    dropdownColor: themeData.backgroundColor,
+                                    dropdownColor:
+                                        themeData.colorScheme.background,
                                     icon: Icon(
                                       Icons.arrow_drop_down,
                                     ),
@@ -289,7 +290,7 @@ class CheckOutState extends State<CheckOut> {
                                               softWrap: true,
                                               overflow: TextOverflow.ellipsis,
                                               style: AppTheme.getTextStyle(
-                                                  themeData.textTheme.bodyText1,
+                                                  themeData.textTheme.bodyLarge,
                                                   color: themeData
                                                       .colorScheme.onBackground,
                                                   fontWeight: 800,
@@ -319,13 +320,14 @@ class CheckOutState extends State<CheckOut> {
                                           .translate('payment_account') +
                                       ' : ',
                                   style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.bodyLarge,
                                       color: themeData.colorScheme.onBackground,
                                       fontWeight: 600,
                                       muted: true)),
                               DropdownButtonHideUnderline(
                                 child: DropdownButton(
-                                    dropdownColor: themeData.backgroundColor,
+                                    dropdownColor:
+                                        themeData.colorScheme.background,
                                     icon: Icon(
                                       Icons.arrow_drop_down,
                                     ),
@@ -342,7 +344,7 @@ class CheckOutState extends State<CheckOut> {
                                               softWrap: true,
                                               overflow: TextOverflow.ellipsis,
                                               style: AppTheme.getTextStyle(
-                                                  themeData.textTheme.bodyText1,
+                                                  themeData.textTheme.bodyLarge,
                                                   color: themeData
                                                       .colorScheme.onBackground,
                                                   fontWeight: 800,
@@ -417,7 +419,7 @@ class CheckOutState extends State<CheckOut> {
                     child: Text(
                       AppLocalizations.of(context).translate('add_payment'),
                       style: AppTheme.getTextStyle(
-                        themeData.textTheme.subtitle1,
+                        themeData.textTheme.titleMedium,
                         fontWeight: 700,
                         color: themeData.colorScheme.primary,
                       ),
@@ -433,7 +435,7 @@ class CheckOutState extends State<CheckOut> {
                                         .translate('shipping_charges') +
                                     ' : ',
                                 style: AppTheme.getTextStyle(
-                                    themeData.textTheme.bodyText1,
+                                    themeData.textTheme.bodyLarge,
                                     color: themeData.colorScheme.onBackground,
                                     fontWeight: 600,
                                     muted: true)),
@@ -537,7 +539,7 @@ class CheckOutState extends State<CheckOut> {
                                           .translate('sell_note') +
                                       ' : ',
                                   style: AppTheme.getTextStyle(
-                                      themeData.textTheme.bodyText1,
+                                      themeData.textTheme.bodyLarge,
                                       color: themeData.colorScheme.onBackground,
                                       fontWeight: 600,
                                       muted: true)),
@@ -555,7 +557,7 @@ class CheckOutState extends State<CheckOut> {
                                             .translate('staff_note') +
                                         ' : ',
                                     style: AppTheme.getTextStyle(
-                                        themeData.textTheme.bodyText1,
+                                        themeData.textTheme.bodyLarge,
                                         color:
                                             themeData.colorScheme.onBackground,
                                         fontWeight: 600,
@@ -597,7 +599,7 @@ class CheckOutState extends State<CheckOut> {
                                             .translate('mobile_layout'),
                                         maxLines: 2,
                                         style: AppTheme.getTextStyle(
-                                            themeData.textTheme.bodyText2,
+                                            themeData.textTheme.bodyMedium,
                                             color: themeData
                                                 .colorScheme.onBackground,
                                             fontWeight: 600),
@@ -635,7 +637,7 @@ class CheckOutState extends State<CheckOut> {
                                             .translate('web_layout'),
                                         maxLines: 2,
                                         style: AppTheme.getTextStyle(
-                                            themeData.textTheme.bodyText2,
+                                            themeData.textTheme.bodyMedium,
                                             color: themeData
                                                 .colorScheme.onBackground,
                                             fontWeight: 600),
@@ -653,9 +655,7 @@ class CheckOutState extends State<CheckOut> {
                             Expanded(
                               flex: 1,
                               child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    primary: themeData.colorScheme.onPrimary,
-                                    elevation: 5),
+                                style: ElevatedButton.styleFrom(elevation: 5),
                                 onPressed: () {
                                   _printInvoice = false;
                                   if (pendingAmount >= 0.01) {
@@ -670,7 +670,7 @@ class CheckOutState extends State<CheckOut> {
                                   AppLocalizations.of(context)
                                       .translate('finalize_n_share'),
                                   style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle1,
+                                    themeData.textTheme.titleMedium,
                                     fontWeight: 700,
                                     color: themeData.colorScheme.primary,
                                   ),
@@ -684,9 +684,7 @@ class CheckOutState extends State<CheckOut> {
                             Expanded(
                               flex: 1,
                               child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    primary: themeData.colorScheme.primary,
-                                    elevation: 5),
+                                style: ElevatedButton.styleFrom(elevation: 5),
                                 onPressed: () {
                                   _printInvoice = true;
                                   if (pendingAmount >= 0.01) {
@@ -701,7 +699,7 @@ class CheckOutState extends State<CheckOut> {
                                   AppLocalizations.of(context)
                                       .translate('finalize_n_print'),
                                   style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle1,
+                                    themeData.textTheme.titleMedium,
                                     fontWeight: 700,
                                     color: themeData.colorScheme.onPrimary,
                                   ),
@@ -738,7 +736,7 @@ class CheckOutState extends State<CheckOut> {
             children: <Widget>[
               Text(
                 subject!,
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyLarge,
                     color: themeData.colorScheme.onBackground,
                     fontWeight: 800,
                     muted: true),
@@ -746,7 +744,7 @@ class CheckOutState extends State<CheckOut> {
               Text(
                 "$symbol $amount",
                 overflow: TextOverflow.ellipsis,
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyLarge,
                     color: textColor, fontWeight: 600, muted: true),
               ),
             ],
@@ -963,14 +961,13 @@ class CheckOutState extends State<CheckOut> {
   alertPending(BuildContext context) {
     AlertDialog alert = new AlertDialog(
       content: Text(AppLocalizations.of(context).translate('pending_message'),
-          style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+          style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
               color: themeData.colorScheme.onBackground,
               fontWeight: 500,
               muted: true)),
       actions: <Widget>[
         TextButton(
             style: TextButton.styleFrom(
-                primary: themeData.colorScheme.onPrimary,
                 backgroundColor: themeData.colorScheme.primary),
             onPressed: () {
               Navigator.pop(context);
@@ -981,7 +978,6 @@ class CheckOutState extends State<CheckOut> {
             child: Text(AppLocalizations.of(context).translate('ok'))),
         TextButton(
             style: TextButton.styleFrom(
-                primary: themeData.colorScheme.primary,
                 backgroundColor: themeData.colorScheme.onPrimary),
             onPressed: () {
               Navigator.pop(context);
@@ -1008,14 +1004,14 @@ class CheckOutState extends State<CheckOut> {
       ),
       content: Text(AppLocalizations.of(context).translate('are_you_sure'),
           textAlign: TextAlign.center,
-          style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+          style: AppTheme.getTextStyle(themeData.textTheme.bodyLarge,
               color: themeData.colorScheme.onBackground,
               fontWeight: 600,
               muted: true)),
       actions: <Widget>[
         TextButton(
             style: TextButton.styleFrom(
-                primary: themeData.colorScheme.primary,
+                foregroundColor: themeData.colorScheme.primary,
                 backgroundColor: themeData.colorScheme.onPrimary),
             onPressed: () {
               Navigator.pop(context);
@@ -1023,8 +1019,8 @@ class CheckOutState extends State<CheckOut> {
             child: Text(AppLocalizations.of(context).translate('cancel'))),
         TextButton(
             style: TextButton.styleFrom(
-                backgroundColor: Colors.red,
-                primary: themeData.colorScheme.onError),
+              backgroundColor: Colors.red,
+            ),
             onPressed: () {
               Navigator.pop(context);
               if (sellId != null && payments[index]['id'] != null) {

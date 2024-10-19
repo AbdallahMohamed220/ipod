@@ -3,7 +3,8 @@ import 'dart:ui';
 
 class Config {
   //static String baseUrl = 'https://devxpos.idiib.com/';
-  static String baseUrl = 'https://quixcelerp.com/';
+  //static String baseUrl = 'https://quixcelerp.com/';
+  static String baseUrl = 'http://pm.quixcelerp.com/';
   static int? userId;
   String clientId = '16',
       //clientSecret = 'lDzqLvBHjrGSKPqV8MVTzPsc09cLkT2MA8pGYWL5',

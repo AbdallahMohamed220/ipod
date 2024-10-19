@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -40,7 +39,8 @@ class Splash extends StatelessWidget {
                     Image.asset('assets/images/splash_screen.png'),
               ),
               Text(AppLocalizations.of(context).translate('welcome'),
-                  style: AppTheme.getTextStyle(themeData.textTheme.headline4,
+                  style: AppTheme.getTextStyle(
+                      themeData.textTheme.headlineMedium,
                       color: themeData.colorScheme.onSurface)),
               ElevatedButton.icon(
                 onPressed: () async {
@@ -59,10 +59,9 @@ class Splash extends StatelessWidget {
                 icon: Icon(Icons.navigate_next,
                     color: themeData.colorScheme.primary),
                 label: Text(AppLocalizations.of(context).translate('login'),
-                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyLarge,
                         color: themeData.colorScheme.primary, fontWeight: 600)),
                 style: ElevatedButton.styleFrom(
-                    primary: themeData.colorScheme.onPrimary,
                     shadowColor: themeData.colorScheme.primary),
               ),
               Visibility(
@@ -73,7 +72,7 @@ class Splash extends StatelessWidget {
                     child: Text(
                         AppLocalizations.of(context).translate('register'),
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.bodyText1,
+                            themeData.textTheme.bodyLarge,
                             color: themeData.colorScheme.onBackground,
                             fontWeight: 600)),
                     onTap: () async {

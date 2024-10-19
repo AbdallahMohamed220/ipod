@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -73,7 +72,7 @@ class _ExpenseState extends State<Expense> {
       appBar: AppBar(
         elevation: 0.0,
         title: Text(AppLocalizations.of(context).translate('expenses'),
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+            style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                 fontWeight: 600)),
       ),
       body: SingleChildScrollView(
@@ -91,7 +90,7 @@ class _ExpenseState extends State<Expense> {
                         AppLocalizations.of(context).translate('location') +
                             ' : ',
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.headline6,
+                            themeData.textTheme.titleLarge,
                             fontWeight: 700,
                             letterSpacing: -0.2),
                       ),
@@ -103,7 +102,7 @@ class _ExpenseState extends State<Expense> {
                       Text(
                         AppLocalizations.of(context).translate('tax') + ' : ',
                         style: AppTheme.getTextStyle(
-                            themeData.textTheme.headline6,
+                            themeData.textTheme.titleLarge,
                             fontWeight: 700,
                             letterSpacing: -0.2),
                       ),
@@ -125,7 +124,7 @@ class _ExpenseState extends State<Expense> {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.headline6,
+                          themeData.textTheme.titleLarge,
                           fontWeight: 700,
                           letterSpacing: -0.2),
                     ),
@@ -148,7 +147,7 @@ class _ExpenseState extends State<Expense> {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.headline6,
+                          themeData.textTheme.titleLarge,
                           fontWeight: 700,
                           letterSpacing: -0.2),
                     ),
@@ -184,7 +183,7 @@ class _ExpenseState extends State<Expense> {
                       ),
                       controller: expenseAmount,
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 400,
                           letterSpacing: -0.2),
                       textAlign: TextAlign.end,
@@ -215,7 +214,7 @@ class _ExpenseState extends State<Expense> {
                       ),
                       controller: expenseNote,
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
+                          themeData.textTheme.titleSmall,
                           fontWeight: 400,
                           letterSpacing: -0.2),
                     ),
@@ -234,9 +233,7 @@ class _ExpenseState extends State<Expense> {
                 padding: EdgeInsets.all(MySize.size8!),
               ),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: themeData.colorScheme.primary,
-                ),
+                style: ElevatedButton.styleFrom(),
                 onPressed: () async {
                   if (await Helper().checkConnectivity()) {
                     if (_formKey.currentState!.validate()) {
@@ -250,7 +247,7 @@ class _ExpenseState extends State<Expense> {
                 },
                 child: Text(
                   AppLocalizations.of(context).translate('submit'),
-                  style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                       color: themeData.colorScheme.onPrimary,
                       fontWeight: 700,
                       letterSpacing: -0.2),
@@ -331,12 +328,12 @@ class _ExpenseState extends State<Expense> {
               value: value,
               height: MySize.size36!,
               child: Text(value['name'],
-                  style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                       color: themeData.colorScheme.onBackground)),
             );
           }).toList();
         },
-        color: themeData.backgroundColor,
+        color: themeData.colorScheme.background,
         child: Container(
           padding: EdgeInsets.only(
               left: MySize.size12!,
@@ -353,7 +350,7 @@ class _ExpenseState extends State<Expense> {
               Text(
                 selectedLocation['name'],
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.bodyText1,
+                  themeData.textTheme.bodyLarge,
                   color: themeData.colorScheme.onBackground,
                 ),
               ),
@@ -396,12 +393,12 @@ class _ExpenseState extends State<Expense> {
             value: value,
             height: MySize.size36!,
             child: Text(value['name'],
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     color: themeData.colorScheme.onBackground)),
           );
         }).toList();
       },
-      color: themeData.backgroundColor,
+      color: themeData.colorScheme.background,
       child: Container(
         padding: EdgeInsets.only(
             left: MySize.size12!,
@@ -418,7 +415,7 @@ class _ExpenseState extends State<Expense> {
             Text(
               selectedTax['name'],
               style: AppTheme.getTextStyle(
-                themeData.textTheme.bodyText1,
+                themeData.textTheme.bodyLarge,
                 color: themeData.colorScheme.onBackground,
               ),
             ),
@@ -462,12 +459,12 @@ class _ExpenseState extends State<Expense> {
             child: Text(value['name'],
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     color: themeData.colorScheme.onBackground)),
           );
         }).toList();
       },
-      color: themeData.backgroundColor,
+      color: themeData.colorScheme.background,
       child: Container(
         padding: EdgeInsets.only(
             left: MySize.size12!,
@@ -490,7 +487,7 @@ class _ExpenseState extends State<Expense> {
                 maxLines: 2,
                 textAlign: TextAlign.end,
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.bodyText1,
+                  themeData.textTheme.bodyLarge,
                   color: themeData.colorScheme.onBackground,
                 ),
               ),
@@ -525,12 +522,12 @@ class _ExpenseState extends State<Expense> {
             child: Text(value['name'],
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
-                style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                     color: themeData.colorScheme.onBackground)),
           );
         }).toList();
       },
-      color: themeData.backgroundColor,
+      color: themeData.colorScheme.background,
       child: Container(
         padding: EdgeInsets.only(
             left: MySize.size12!,
@@ -553,7 +550,7 @@ class _ExpenseState extends State<Expense> {
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
                 style: AppTheme.getTextStyle(
-                  themeData.textTheme.bodyText1,
+                  themeData.textTheme.bodyLarge,
                   color: themeData.colorScheme.onBackground,
                 ),
               ),
@@ -627,47 +624,50 @@ class _ExpenseState extends State<Expense> {
   Widget payment() {
     return Column(
       children: <Widget>[
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <
-            Widget>[
-          Expanded(
-            child: TextFormField(
-                validator: (value) {
-                  if (value == '') value = '0.00';
-                  if (expenseAmount.text == '' ||
-                      double.parse(value!) > double.parse(expenseAmount.text)) {
-                    return AppLocalizations.of(context)
-                        .translate('enter_valid_payment_amount');
-                  } else {
-                    return null;
-                  }
-                },
-                decoration: InputDecoration(
-                  prefix: Text(symbol),
-                  labelText:
-                      AppLocalizations.of(context).translate('payment_amount'),
-                  border: themeData.inputDecorationTheme.border,
-                  enabledBorder: themeData.inputDecorationTheme.border,
-                  focusedBorder: themeData.inputDecorationTheme.focusedBorder,
-                ),
-                controller: payingAmount,
-                textAlign: TextAlign.end,
-                style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
-                    fontWeight: 400, letterSpacing: -0.2),
-                inputFormatters: [
-                  FilteringTextInputFormatter(RegExp(r'^(\d+)?\.?\d{0,2}'),
-                      allow: true)
-                ],
-                keyboardType: TextInputType.number,
-                onChanged: (value) {}),
-          ),
-        ]),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Expanded(
+                child: TextFormField(
+                    validator: (value) {
+                      if (value == '') value = '0.00';
+                      if (expenseAmount.text == '' ||
+                          double.parse(value!) >
+                              double.parse(expenseAmount.text)) {
+                        return AppLocalizations.of(context)
+                            .translate('enter_valid_payment_amount');
+                      } else {
+                        return null;
+                      }
+                    },
+                    decoration: InputDecoration(
+                      prefix: Text(symbol),
+                      labelText: AppLocalizations.of(context)
+                          .translate('payment_amount'),
+                      border: themeData.inputDecorationTheme.border,
+                      enabledBorder: themeData.inputDecorationTheme.border,
+                      focusedBorder:
+                          themeData.inputDecorationTheme.focusedBorder,
+                    ),
+                    controller: payingAmount,
+                    textAlign: TextAlign.end,
+                    style: AppTheme.getTextStyle(themeData.textTheme.titleSmall,
+                        fontWeight: 400, letterSpacing: -0.2),
+                    inputFormatters: [
+                      FilteringTextInputFormatter(RegExp(r'^(\d+)?\.?\d{0,2}'),
+                          allow: true)
+                    ],
+                    keyboardType: TextInputType.number,
+                    onChanged: (value) {}),
+              ),
+            ]),
         Padding(
           padding: EdgeInsets.all(MySize.size8!),
         ),
         Row(children: <Widget>[
           Text(
             AppLocalizations.of(context).translate('payment_method') + ' : ',
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+            style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                 fontWeight: 700, letterSpacing: -0.2),
           ),
           PopupMenuButton(
@@ -689,12 +689,12 @@ class _ExpenseState extends State<Expense> {
                   height: MySize.size36!,
                   child: Text(value['value'],
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.bodyMedium,
                           color: themeData.colorScheme.onBackground)),
                 );
               }).toList();
             },
-            color: themeData.backgroundColor,
+            color: themeData.colorScheme.background,
             child: Container(
               padding: EdgeInsets.only(
                   left: MySize.size12!,
@@ -711,7 +711,7 @@ class _ExpenseState extends State<Expense> {
                   Text(
                     selectedPaymentMethod['value'],
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText1,
+                      themeData.textTheme.bodyLarge,
                       color: themeData.colorScheme.onBackground,
                     ),
                   ),
@@ -738,7 +738,7 @@ class _ExpenseState extends State<Expense> {
       children: <Widget>[
         Text(
           AppLocalizations.of(context).translate('payment_account') + ' : ',
-          style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+          style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
               fontWeight: 700, letterSpacing: -0.2),
         ),
         PopupMenuButton(
@@ -755,12 +755,12 @@ class _ExpenseState extends State<Expense> {
                 value: value,
                 height: MySize.size36!,
                 child: Text(value['name'],
-                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText2,
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyMedium,
                         color: themeData.colorScheme.onBackground)),
               );
             }).toList();
           },
-          color: themeData.backgroundColor,
+          color: themeData.colorScheme.background,
           child: Container(
             padding: EdgeInsets.only(
                 left: MySize.size12!,
@@ -777,7 +777,7 @@ class _ExpenseState extends State<Expense> {
                 Text(
                   selectedPaymentAccount['name'],
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.bodyLarge,
                     color: themeData.colorScheme.onBackground,
                   ),
                 ),

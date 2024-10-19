@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -118,7 +117,7 @@ class _ContactsState extends State<Contacts> {
             )
           ],
           title: Text(AppLocalizations.of(context).translate('contacts'),
-              style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              style: AppTheme.getTextStyle(themeData.textTheme.titleLarge,
                   fontWeight: 600)),
           bottom: TabBar(
               onTap: (int val) {
@@ -317,19 +316,18 @@ class _ContactsState extends State<Contacts> {
       child: Container(
         padding: EdgeInsets.all(MySize.size12!),
         width: MediaQuery.of(context).size.width * 0.75,
-        color: themeData.backgroundColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Form(
               // key: _formKey,
               child: TextFormField(
-                  style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
+                  style: AppTheme.getTextStyle(themeData.textTheme.titleMedium,
                       letterSpacing: 0, fontWeight: 500),
                   decoration: InputDecoration(
                     hintText: AppLocalizations.of(context).translate('search'),
                     hintStyle: AppTheme.getTextStyle(
-                        themeData.textTheme.subtitle2,
+                        themeData.textTheme.titleMedium,
                         letterSpacing: 0,
                         fontWeight: 500),
                     border: OutlineInputBorder(
@@ -348,10 +346,10 @@ class _ContactsState extends State<Contacts> {
                         ),
                         borderSide: BorderSide.none),
                     filled: true,
-                    fillColor: themeData.colorScheme.background,
+                    fillColor: themeData.colorScheme.surface,
                     prefixIcon: Icon(
                       MdiIcons.magnify,
-                      color: themeData.colorScheme.onBackground.withAlpha(150),
+                      color: themeData.colorScheme.onSurface.withAlpha(150),
                     ),
                     isDense: true,
                     contentPadding: EdgeInsets.only(right: MySize.size16!),
@@ -392,7 +390,7 @@ class _ContactsState extends State<Contacts> {
                       ? Text(
                           "${AppLocalizations.of(context).translate('order_by')} :",
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
                               letterSpacing: 0),
                         )
@@ -400,7 +398,7 @@ class _ContactsState extends State<Contacts> {
                           AppLocalizations.of(context)
                               .translate('tap_for_order_by'),
                           style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText1,
+                              themeData.textTheme.titleMedium,
                               fontWeight: 600,
                               letterSpacing: 0),
                         ),
@@ -420,7 +418,7 @@ class _ContactsState extends State<Contacts> {
                     label: Text(
                       "$orderByDirection".toUpperCase(),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 500,
                           letterSpacing: 0),
                     ),
@@ -443,7 +441,7 @@ class _ContactsState extends State<Contacts> {
                     title: Text(
                       AppLocalizations.of(context).translate('name'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 500,
                           letterSpacing: 0),
                     ),
@@ -464,7 +462,7 @@ class _ContactsState extends State<Contacts> {
                     title: Text(
                       AppLocalizations.of(context).translate('business_name'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText2,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 500,
                           letterSpacing: 0),
                     ),
@@ -514,9 +512,9 @@ class _ContactsState extends State<Contacts> {
             child: Text(
               '${contactDetails['supplier_business_name']}',
               style: AppTheme.getTextStyle(
-                themeData.textTheme.bodyText1,
+                themeData.textTheme.titleMedium,
                 fontWeight: 600,
-                color: themeData.colorScheme.onBackground,
+                color: themeData.colorScheme.onSurface,
               ),
             ),
           ),
@@ -529,9 +527,9 @@ class _ContactsState extends State<Contacts> {
                 Text(
                   "${AppLocalizations.of(context).translate('customer')} : ",
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 600,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
                 Flexible(
@@ -541,9 +539,9 @@ class _ContactsState extends State<Contacts> {
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText2,
+                      themeData.textTheme.titleMedium,
                       fontWeight: 500,
-                      color: themeData.colorScheme.onBackground,
+                      color: themeData.colorScheme.onSurface,
                     ),
                   ),
                 ),
@@ -558,9 +556,9 @@ class _ContactsState extends State<Contacts> {
                 Text(
                   "${AppLocalizations.of(context).translate('last')} : ",
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 600,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
                 Text(
@@ -569,9 +567,9 @@ class _ContactsState extends State<Contacts> {
                       : ' - ',
                   overflow: TextOverflow.ellipsis,
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText2,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 500,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
               ],
@@ -586,9 +584,9 @@ class _ContactsState extends State<Contacts> {
                 Text(
                   "${AppLocalizations.of(context).translate('upcoming')} : ",
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText1,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 600,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
                 Text(
@@ -597,9 +595,9 @@ class _ContactsState extends State<Contacts> {
                       : ' - ',
                   overflow: TextOverflow.ellipsis,
                   style: AppTheme.getTextStyle(
-                    themeData.textTheme.bodyText2,
+                    themeData.textTheme.titleMedium,
                     fontWeight: 500,
-                    color: themeData.colorScheme.onBackground,
+                    color: themeData.colorScheme.onSurface,
                   ),
                 ),
               ],
@@ -634,7 +632,7 @@ class _ContactsState extends State<Contacts> {
                   label: Text(
                     AppLocalizations.of(context).translate('add_follow_up'),
                     style: AppTheme.getTextStyle(
-                      themeData.textTheme.bodyText1,
+                      themeData.textTheme.titleMedium,
                       fontWeight: 600,
                       color: themeData.colorScheme.primary,
                     ),
@@ -735,7 +733,7 @@ class _ContactsState extends State<Contacts> {
                           child: Center(
                             child: Icon(
                               MdiIcons.accountChildCircle,
-                              color: themeData.colorScheme.onBackground,
+                              color: themeData.colorScheme.onSurface,
                             ),
                           ),
                         ),
@@ -751,16 +749,16 @@ class _ContactsState extends State<Contacts> {
                                       width: 50,
                                       child: TextFormField(
                                         controller: prefix,
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleMedium!
                                             .merge(TextStyle(
                                                 color: themeData
-                                                    .colorScheme.onBackground)),
+                                                    .colorScheme.onSurface)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           hintText: AppLocalizations.of(context)
                                               .translate('prefix'),
                                           border: UnderlineInputBorder(
@@ -807,16 +805,16 @@ class _ContactsState extends State<Contacts> {
                                             return null;
                                           }
                                         },
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleMedium!
                                             .merge(TextStyle(
                                                 color: themeData
-                                                    .colorScheme.onBackground)),
+                                                    .colorScheme.onSurface)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           hintText: AppLocalizations.of(context)
                                               .translate('first_name'),
                                           border: UnderlineInputBorder(
@@ -858,16 +856,16 @@ class _ContactsState extends State<Contacts> {
                                       width: MySize.screenWidth! * 0.35,
                                       child: TextFormField(
                                         controller: middleName,
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleMedium!
                                             .merge(TextStyle(
                                                 color: themeData
-                                                    .colorScheme.onBackground)),
+                                                    .colorScheme.onSurface)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           hintText: AppLocalizations.of(context)
                                               .translate('middle_name'),
                                           border: UnderlineInputBorder(
@@ -903,16 +901,16 @@ class _ContactsState extends State<Contacts> {
                                       width: MySize.screenWidth! * 0.35,
                                       child: TextFormField(
                                         controller: lastName,
-                                        style: themeData.textTheme.subtitle2!
+                                        style: themeData.textTheme.titleMedium!
                                             .merge(TextStyle(
                                                 color: themeData
-                                                    .colorScheme.onBackground)),
+                                                    .colorScheme.onSurface)),
                                         decoration: InputDecoration(
                                           hintStyle: themeData
-                                              .textTheme.subtitle2!
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           hintText: AppLocalizations.of(context)
                                               .translate('last_name'),
                                           border: UnderlineInputBorder(
@@ -962,7 +960,7 @@ class _ContactsState extends State<Contacts> {
                             child: Center(
                               child: Icon(
                                 MdiIcons.homeCityOutline,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                           ),
@@ -974,15 +972,16 @@ class _ContactsState extends State<Contacts> {
                                 children: <Widget>[
                                   TextFormField(
                                     controller: addressLine1,
-                                    style: themeData.textTheme.subtitle2!.merge(
-                                        TextStyle(
+                                    style: themeData.textTheme.titleMedium!
+                                        .merge(TextStyle(
                                             color: themeData
-                                                .colorScheme.onBackground)),
+                                                .colorScheme.onSurface)),
                                     decoration: InputDecoration(
-                                      hintStyle: themeData.textTheme.subtitle2!
+                                      hintStyle: themeData
+                                          .textTheme.titleMedium!
                                           .merge(TextStyle(
                                               color: themeData
-                                                  .colorScheme.onBackground)),
+                                                  .colorScheme.onSurface)),
                                       hintText: AppLocalizations.of(context)
                                           .translate('address_line_1'),
                                       border: UnderlineInputBorder(
@@ -1015,15 +1014,16 @@ class _ContactsState extends State<Contacts> {
                                   ),
                                   TextFormField(
                                     controller: addressLine2,
-                                    style: themeData.textTheme.subtitle2!.merge(
-                                        TextStyle(
+                                    style: themeData.textTheme.titleMedium!
+                                        .merge(TextStyle(
                                             color: themeData
-                                                .colorScheme.onBackground)),
+                                                .colorScheme.onSurface)),
                                     decoration: InputDecoration(
-                                      hintStyle: themeData.textTheme.subtitle2!
+                                      hintStyle: themeData
+                                          .textTheme.titleMedium!
                                           .merge(TextStyle(
                                               color: themeData
-                                                  .colorScheme.onBackground)),
+                                                  .colorScheme.onSurface)),
                                       hintText: AppLocalizations.of(context)
                                           .translate('address_line_2'),
                                       border: UnderlineInputBorder(
@@ -1071,7 +1071,7 @@ class _ContactsState extends State<Contacts> {
                             child: Center(
                               child: Icon(
                                 MdiIcons.phoneOutline,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                           ),
@@ -1093,15 +1093,16 @@ class _ContactsState extends State<Contacts> {
                                         return null;
                                       }
                                     },
-                                    style: themeData.textTheme.subtitle2!.merge(
-                                        TextStyle(
+                                    style: themeData.textTheme.titleMedium!
+                                        .merge(TextStyle(
                                             color: themeData
-                                                .colorScheme.onBackground)),
+                                                .colorScheme.onSurface)),
                                     decoration: InputDecoration(
-                                      hintStyle: themeData.textTheme.subtitle2!
+                                      hintStyle: themeData
+                                          .textTheme.titleMedium!
                                           .merge(TextStyle(
                                               color: themeData
-                                                  .colorScheme.onBackground)),
+                                                  .colorScheme.onSurface)),
                                       hintText: AppLocalizations.of(context)
                                           .translate('phone'),
                                       border: UnderlineInputBorder(
@@ -1149,7 +1150,7 @@ class _ContactsState extends State<Contacts> {
                             child: Center(
                               child: Icon(
                                 MdiIcons.homeCityOutline,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                               ),
                             ),
                           ),
@@ -1167,16 +1168,17 @@ class _ContactsState extends State<Contacts> {
                                         width: MySize.screenWidth! * 0.35,
                                         child: TextFormField(
                                           controller: city,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleMedium!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
-                                                        .onBackground)),
+                                                        .onSurface)),
                                             hintText:
                                                 AppLocalizations.of(context)
                                                     .translate('city'),
@@ -1213,16 +1215,17 @@ class _ContactsState extends State<Contacts> {
                                         width: MySize.screenWidth! * 0.35,
                                         child: TextFormField(
                                           controller: state,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleMedium!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
-                                                        .onBackground)),
+                                                        .onSurface)),
                                             hintText:
                                                 AppLocalizations.of(context)
                                                     .translate('state'),
@@ -1265,16 +1268,17 @@ class _ContactsState extends State<Contacts> {
                                         width: MySize.screenWidth! * 0.35,
                                         child: TextFormField(
                                           controller: country,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleMedium!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
-                                                        .onBackground)),
+                                                        .onSurface)),
                                             hintText:
                                                 AppLocalizations.of(context)
                                                     .translate('country'),
@@ -1312,16 +1316,17 @@ class _ContactsState extends State<Contacts> {
                                         child: TextFormField(
                                           controller: zip,
                                           keyboardType: TextInputType.number,
-                                          style: themeData.textTheme.subtitle2!
+                                          style: themeData
+                                              .textTheme.titleMedium!
                                               .merge(TextStyle(
-                                                  color: themeData.colorScheme
-                                                      .onBackground)),
+                                                  color: themeData
+                                                      .colorScheme.onSurface)),
                                           decoration: InputDecoration(
                                             hintStyle: themeData
-                                                .textTheme.subtitle2!
+                                                .textTheme.titleMedium!
                                                 .merge(TextStyle(
                                                     color: themeData.colorScheme
-                                                        .onBackground)),
+                                                        .onSurface)),
                                             hintText:
                                                 AppLocalizations.of(context)
                                                     .translate('zip_code'),
@@ -1415,7 +1420,7 @@ class _ContactsState extends State<Contacts> {
                                 .translate('add_to_contact')
                                 .toUpperCase(),
                             style: AppTheme.getTextStyle(
-                                themeData.textTheme.bodyText1,
+                                themeData.textTheme.titleMedium,
                                 color: themeData.colorScheme.onPrimary,
                                 letterSpacing: 0.3)),
                       ),
@@ -1446,13 +1451,13 @@ class _ContactsState extends State<Contacts> {
                       AppLocalizations.of(context)
                           .translate('check_connectivity'),
                       style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle1,
+                          themeData.textTheme.titleMedium,
                           fontWeight: 700,
                           letterSpacing: -0.2),
                     ),
                     Icon(
                       Icons.error_outline,
-                      color: themeData.colorScheme.onBackground,
+                      color: themeData.colorScheme.onSurface,
                     )
                   ],
                 );
