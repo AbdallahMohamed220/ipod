@@ -47,18 +47,18 @@ dependencies:
   flutter_html_to_pdf: any
   #  flutter_phone_state: any
   #  flutter_polyline_points: any
-  fluttertoast: 8.2.2
-  geolocator: 8.2.1
+  fluttertoast: ^8.2.10
+  geolocator: ^13.0.2
   get_ip_address: any
   google_fonts: ^6.1.0
-  google_maps_flutter: 2.4.0
+  google_maps_flutter: ^2.10.0
   http: any
   image_picker: any
   #  intl_phone_number_input: any
   material_design_icons_flutter: any
   path_provider: any
   pdf: any
-  permission_handler: 9.0.2
+  permission_handler: ^11.3.1
   printing: ^5.11.1
   provider: any
   qr: any
@@ -67,7 +67,7 @@ dependencies:
   shared_preferences: any
   search_choices: any
   share: any
-  syncfusion_flutter_datepicker: ^27.1.53
+  syncfusion_flutter_datepicker: ^28.1.33
   url_launcher: any
   video_player: any
   intl: any
