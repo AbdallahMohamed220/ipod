@@ -2,12 +2,9 @@ import 'dart:ui';
 //import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Config {
-  //static String baseUrl = 'https://devxpos.idiib.com/';
-  //static String baseUrl = 'https://quixcelerp.com/';
-  static String baseUrl = 'http://pm.quixcelerp.com/';
+  static String baseUrl = 'https://quixcelerp.avtax.net/';
   static int? userId;
   String clientId = '16',
-      //clientSecret = 'lDzqLvBHjrGSKPqV8MVTzPsc09cLkT2MA8pGYWL5',
       clientSecret = 'B4UNLqT18Os4CFcwLNvK2NQQHeShD5LVxkTbkbPO',
       copyright = '\u00a9',
       appName = 'pos',

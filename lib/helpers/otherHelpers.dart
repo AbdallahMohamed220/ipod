@@ -3,10 +3,10 @@ import 'dart:math';
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 // import 'package:call_log/call_log.dart';
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:cron/cron.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html_to_pdf/flutter_html_to_pdf.dart';
+import 'package:flutter_html_to_pdf_plus/flutter_html_to_pdf_plus.dart';
 import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:path_provider/path_provider.dart';
@@ -14,7 +14,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:permission_handler/permission_handler.dart';
 import 'package:printing/printing.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../config.dart';
@@ -97,9 +97,10 @@ class Helper {
 
   //check internet connectivity
   Future<bool> checkConnectivity() async {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    if (connectivityResult == ConnectivityResult.mobile ||
-        connectivityResult == ConnectivityResult.wifi) {
+    var connectivityResult = await Connectivity().checkConnectivity();
+    // Mobile or WiFi means connected
+    if (connectivityResult.contains(ConnectivityResult.mobile) ||
+        connectivityResult.contains(ConnectivityResult.wifi)) {
       return true;
     } else {
       return false;
@@ -258,9 +259,18 @@ class Helper {
     var targetFileName = "invoice_no: ${Random().nextInt(100)}";
 
     var generatedPdfFile = await FlutterHtmlToPdf.convertFromHtmlContent(
-        _invoice, targetPath.path, targetFileName);
+      content: _invoice,
+      configuration: PrintPdfConfiguration(
+        targetDirectory: targetPath.path,
+        targetName: targetFileName,
+      ),
+    );
 
-    await Share.shareFiles([generatedPdfFile.path]);
+    await Share.shareXFiles(
+      [XFile(generatedPdfFile.path)],
+      text: 'Here is your PDF!',
+    );
+
     //to get file path use generatedPdfFile.path
   }
 

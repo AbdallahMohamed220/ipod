@@ -122,7 +122,7 @@ class _LoginState extends State<Login> {
                         style: AppTheme.getTextStyle(
                             themeData.textTheme.bodyLarge,
                             letterSpacing: 0.1,
-                            color: themeData.colorScheme.onBackground,
+                            color: themeData.colorScheme.onSurface,
                             fontWeight: 500),
                         decoration: InputDecoration(
                           hintText: AppLocalizations.of(context)
@@ -130,7 +130,7 @@ class _LoginState extends State<Login> {
                           hintStyle: AppTheme.getTextStyle(
                               themeData.textTheme.titleSmall,
                               letterSpacing: 0.1,
-                              color: themeData.colorScheme.onBackground,
+                              color: themeData.colorScheme.onSurface,
                               fontWeight: 500),
                           prefixIcon: Icon(MdiIcons.emailOutline),
                         ),
@@ -151,7 +151,7 @@ class _LoginState extends State<Login> {
                           style: AppTheme.getTextStyle(
                               themeData.textTheme.bodyLarge,
                               letterSpacing: 0.1,
-                              color: themeData.colorScheme.onBackground,
+                              color: themeData.colorScheme.onSurface,
                               fontWeight: 500),
                           decoration: InputDecoration(
                             hintText: AppLocalizations.of(context)
@@ -159,7 +159,7 @@ class _LoginState extends State<Login> {
                             hintStyle: AppTheme.getTextStyle(
                                 themeData.textTheme.titleSmall,
                                 letterSpacing: 0.1,
-                                color: themeData.colorScheme.onBackground,
+                                color: themeData.colorScheme.onSurface,
                                 fontWeight: 500),
                             prefixIcon: Icon(MdiIcons.lockOutline),
                             suffixIcon: IconButton(
@@ -234,7 +234,8 @@ class _LoginState extends State<Login> {
 
                                   print(loginResponse);
 
-                                  if (loginResponse!['success']) {
+                                  if (loginResponse != null &&
+                                      loginResponse['success']) {
                                     //schedule job for syncing callLogs
                                     Helper().jobScheduler();
                                     //Get current logged in user details and save it.

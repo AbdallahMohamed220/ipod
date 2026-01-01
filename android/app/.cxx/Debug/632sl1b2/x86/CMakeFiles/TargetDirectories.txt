@@ -1,0 +1,2 @@
+/Users/abdallah/Documents/ipod/android/app/.cxx/Debug/632sl1b2/x86/CMakeFiles/edit_cache.dir
+/Users/abdallah/Documents/ipod/android/app/.cxx/Debug/632sl1b2/x86/CMakeFiles/rebuild_cache.dir
